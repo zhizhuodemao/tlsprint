@@ -279,7 +279,8 @@ func (r *Request) Execute(method, rawURL string, headers ...map[string]string) (
 	if err != nil {
 		return out, fmt.Errorf("client: read response body: %w", err)
 	}
-	out.body = raw
+	out.rawBody = raw
+	out.body = decodeBody(resp.Header.Get("Content-Encoding"), raw)
 
 	// Decode into the result target on 2xx.
 	if r.result != nil && resp.StatusCode >= 200 && resp.StatusCode < 300 {

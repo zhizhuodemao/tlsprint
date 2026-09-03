@@ -1,6 +1,8 @@
 package client
 
 import (
+	"bytes"
+	"compress/gzip"
 	"crypto/x509"
 	"encoding/json"
 	"fmt"
@@ -10,6 +12,8 @@ import (
 	"strings"
 	"sync"
 	"testing"
+
+	"github.com/andybalholm/brotli"
 )
 
 // handler is a small echo server used by the tests.
@@ -285,4 +289,54 @@ func TestClientConcurrentSetBaseURL(t *testing.T) {
 		}()
 	}
 	wg.Wait()
+}
+
+// TestClientAutoDecompress verifies the client transparently decodes the
+// response body based on Content-Encoding (br and gzip), while RawBody keeps
+// the original compressed bytes.
+func TestClientAutoDecompress(t *testing.T) {
+	plain := "hello tlsprint\n"
+	h := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case "/br":
+			w.Header().Set("Content-Encoding", "br")
+			w.Header().Set("Content-Type", "text/plain")
+			var buf bytes.Buffer
+			bw := brotli.NewWriter(&buf)
+			_, _ = bw.Write([]byte(plain))
+			_ = bw.Close()
+			_, _ = w.Write(buf.Bytes())
+		case "/gzip":
+			w.Header().Set("Content-Encoding", "gzip")
+			gz := gzip.NewWriter(w)
+			_, _ = gz.Write([]byte(plain))
+			_ = gz.Close()
+		}
+	})
+	srv := httptest.NewServer(h)
+	defer srv.Close()
+
+	c := NewClient()
+
+	resp, err := c.Get(srv.URL + "/br")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if want, got := plain, resp.String(); got != want {
+		t.Fatalf("br String() = %q, want %q", got, want)
+	}
+	if string(resp.RawBody()) == plain {
+		t.Fatal("RawBody() should be the compressed bytes, got plain")
+	}
+	if len(resp.Body()) != len(plain) {
+		t.Fatalf("br Body() len = %d, want %d (decoded)", len(resp.Body()), len(plain))
+	}
+
+	resp2, err := c.Get(srv.URL + "/gzip")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if want, got := plain, resp2.String(); got != want {
+		t.Fatalf("gzip String() = %q, want %q", got, want)
+	}
 }

@@ -74,6 +74,9 @@ Initial open-source release.
 - **curl_cffi-style API**: module-level `client.Get/Post/...` with the
   fingerprint passed on the call (`Impersonate("chrome-152")`) plus reusable
   session verbs and request options (`Header/Headers/Query/Cookie/Body/...`).
+- **Automatic response decompression** (`client`): `Body`/`String`/`JSON` now
+  decode the response based on `Content-Encoding` (gzip, deflate, br, zstd)
+  transparently; `RawBody()` exposes the original compressed bytes.
 - **Release-readiness fixes** (from an independent adversarial review):
   - Newest-preset resolution now compares versions numerically
     (`Lookup("curl")` correctly returns 8.16.0, not 8.9.1).

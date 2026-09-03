@@ -1,18 +1,31 @@
 package client
 
 import (
+	"bytes"
+	"compress/gzip"
+	"compress/zlib"
 	"encoding/json"
+	"io"
 	"net/http"
+	"strings"
 	"time"
+
+	"github.com/andybalholm/brotli"
+	"github.com/klauspost/compress/zstd"
 )
 
 // Response wraps an HTTP response with the body already read into memory.
+//
+// The body is transparently decoded based on the response Content-Encoding
+// header (gzip, deflate, br, zstd), so String()/Body()/JSON() operate on the
+// readable content. RawBody() returns the original wire bytes.
 type Response struct {
 	statusCode int
 	status     string
 	header     http.Header
 	proto      string
-	body       []byte
+	rawBody    []byte // bytes as received on the wire (possibly compressed)
+	body       []byte // decoded content (see decodeBody)
 	requestURL string
 	duration   time.Duration
 }
@@ -26,10 +39,16 @@ func (r *Response) Status() string { return r.status }
 // Header returns the response headers.
 func (r *Response) Header() http.Header { return r.header }
 
-// Body returns the response body bytes.
+// Body returns the decoded response body bytes (gzip/deflate/br/zstd are
+// decompressed automatically based on Content-Encoding). Use RawBody for the
+// undecoded wire bytes.
 func (r *Response) Body() []byte { return r.body }
 
-// String returns the response body as a string.
+// RawBody returns the response body exactly as received on the wire — still
+// compressed when the server used a content encoding.
+func (r *Response) RawBody() []byte { return r.rawBody }
+
+// String returns the decoded response body as a string.
 func (r *Response) String() string { return string(r.body) }
 
 // Proto returns the response protocol, e.g. "HTTP/2.0".
@@ -62,5 +81,54 @@ func (r *Response) IsError() bool {
 	return r.statusCode >= 400 && r.statusCode < 600
 }
 
-// JSON decodes the response body into v.
+// JSON decodes the (decompressed) response body into v.
 func (r *Response) JSON(v any) error { return json.Unmarshal(r.body, v) }
+
+// decodeBody decompresses a response body according to its Content-Encoding
+// header. Encodings are applied in order, so they are decoded in reverse. Any
+// unknown encoding or decode failure falls back to the raw bytes so no data is
+// lost.
+func decodeBody(contentEncoding string, raw []byte) []byte {
+	if contentEncoding == "" || strings.EqualFold(contentEncoding, "identity") {
+		return raw
+	}
+	tokens := strings.Split(contentEncoding, ",")
+	out := raw
+	// Content-Encoding lists encodings in the order applied; decode in reverse.
+	for i := len(tokens) - 1; i >= 0; i-- {
+		enc := strings.ToLower(strings.TrimSpace(tokens[i]))
+		var reader io.Reader
+		switch enc {
+		case "gzip":
+			gz, err := gzip.NewReader(bytes.NewReader(out))
+			if err != nil {
+				return raw
+			}
+			reader = gz
+		case "deflate":
+			zr, err := zlib.NewReader(bytes.NewReader(out))
+			if err != nil {
+				return raw
+			}
+			reader = zr
+		case "br":
+			reader = brotli.NewReader(bytes.NewReader(out))
+		case "zstd":
+			zd, err := zstd.NewReader(bytes.NewReader(out))
+			if err != nil {
+				return raw
+			}
+			defer zd.Close()
+			reader = zd
+		default:
+			// Unknown content encoding: don't guess, return the raw bytes.
+			return raw
+		}
+		decoded, err := io.ReadAll(reader)
+		if err != nil {
+			return raw
+		}
+		out = decoded
+	}
+	return out
+}

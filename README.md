@@ -196,7 +196,8 @@ Client methods (chainable): `Impersonate`/`SetPreset`/`SetBrowser`,
 | Method | Description |
 | --- | --- |
 | `StatusCode() int` / `Status() string` | e.g. `200` / `"200 OK"` |
-| `String() string` / `Body() []byte` | response body |
+| `String() string` / `Body() []byte` | decoded response body (gzip/deflate/br/zstd are auto-decompressed) |
+| `RawBody() []byte` | the undecoded wire bytes (still compressed) |
 | `Header() http.Header` / `Cookies() []*http.Cookie` | headers / Set-Cookie |
 | `JSON(v any) error` | decode body into `v` |
 | `Proto() string` | `"HTTP/2.0"` or `"HTTP/1.1"` |
@@ -205,6 +206,11 @@ Client methods (chainable): `Impersonate`/`SetPreset`/`SetBrowser`,
 
 > Non-2xx responses are **not** errors — check `resp.IsSuccess()`. Errors are
 > only network/transport/encoding failures.
+>
+> **Automatic decompression**: the body is decoded from the response
+> `Content-Encoding` (gzip, deflate, `br`, `zstd`), so `resp.String()` /
+> `resp.Body()` / `resp.JSON()` return readable content; use `resp.RawBody()`
+> for the original compressed bytes.
 
 ### CLI
 
