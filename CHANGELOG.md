@@ -3,6 +3,16 @@
 All notable changes to tlsprint are documented here. This project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## [v1.0.1] - 2026-09-03
+
+### Fixed
+
+- **client**: the response body is now decompressed automatically from the
+  `Content-Encoding` header (gzip, deflate, `br`, `zstd`), so
+  `Response.String()/Body()/JSON()` return readable content. `RawBody()` keeps
+  the original compressed bytes. Fixes `invalid character '\x8f'` when parsing
+  a brotli-encoded JSON response (e.g. TikTok) without manual decoding.
+
 ## [Unreleased]
 
 Initial open-source release.
