@@ -1,12 +1,15 @@
 package client
 
 import (
+	"bufio"
 	"bytes"
 	"compress/gzip"
 	"crypto/x509"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"io"
+	"net"
 	"net/http"
 	"net/http/httptest"
 	"strings"
@@ -338,5 +341,91 @@ func TestClientAutoDecompress(t *testing.T) {
 	}
 	if want, got := plain, resp2.String(); got != want {
 		t.Fatalf("gzip String() = %q, want %q", got, want)
+	}
+}
+
+// startAuthProxy runs a minimal HTTP CONNECT proxy on 127.0.0.1:0 that only
+// allows CONNECT when the request carries the expected Proxy-Authorization.
+// It relays bytes to the target and reports the received auth header.
+func startAuthProxy(t *testing.T, user, pass string) (addr string, gotAuth chan string) {
+	t.Helper()
+	ln, err := net.Listen("tcp", "127.0.0.1:0")
+	if err != nil {
+		t.Fatal(err)
+	}
+	t.Cleanup(func() { ln.Close() })
+	gotAuth = make(chan string, 8)
+	want := "Basic " + base64.StdEncoding.EncodeToString([]byte(user+":"+pass))
+
+	go func() {
+		for {
+			c, err := ln.Accept()
+			if err != nil {
+				return
+			}
+			go func(c net.Conn) {
+				defer c.Close()
+				r := bufio.NewReader(c)
+				reqLine, err := r.ReadString('\n')
+				if err != nil {
+					return
+				}
+				auth := ""
+				for {
+					line, err := r.ReadString('\n')
+					if err != nil || line == "\r\n" || line == "\n" || line == "" {
+						break
+					}
+					if strings.HasPrefix(strings.ToLower(line), "proxy-authorization:") {
+						auth = strings.TrimSpace(line[len("Proxy-Authorization:"):])
+					}
+				}
+				gotAuth <- auth
+				if !strings.EqualFold(auth, want) {
+					_, _ = c.Write([]byte("HTTP/1.1 407 Proxy Authentication Required\r\n\r\n"))
+					return
+				}
+				parts := strings.Fields(reqLine)
+				if len(parts) < 2 {
+					return
+				}
+				target := parts[1]
+				if _, err := c.Write([]byte("HTTP/1.1 200 Connection Established\r\n\r\n")); err != nil {
+					return
+				}
+				tc, err := net.Dial("tcp", target)
+				if err != nil {
+					return
+				}
+				defer tc.Close()
+				go func() { _, _ = io.Copy(tc, r) }() // client -> target (r covers buffered bytes)
+				_, _ = io.Copy(c, tc)                 // target -> client
+			}(c)
+		}
+	}()
+	return ln.Addr().String(), gotAuth
+}
+
+// TestClientProxyAuthWithCredentials verifies the client sends
+// Proxy-Authorization for http://user:pass@host:port proxies and can tunnel.
+func TestClientProxyAuthWithCredentials(t *testing.T) {
+	target := startTLSServer(t, true) // https target (h2 capable)
+
+	proxyAddr, gotAuth := startAuthProxy(t, "xogymodocopatu", "JRWTMBI-UHD3TDC-EBZIFQN-JEIVIFE-GB1KISF-61G2CTD-ZDODDC3")
+
+	c := NewClient(
+		WithRootCAs(rootsOf(t, target)),
+		WithProxy(fmt.Sprintf("http://xogymodocopatu:JRWTMBI-UHD3TDC-EBZIFQN-JEIVIFE-GB1KISF-61G2CTD-ZDODDC3@%s", proxyAddr)),
+	)
+	targetURL := target.URL + "/check"
+	resp, err := c.Get(targetURL, Query("q", "hi"))
+	if err != nil {
+		t.Fatalf("Get via authenticated proxy: %v", err)
+	}
+	if !resp.IsSuccess() {
+		t.Fatalf("status = %d", resp.StatusCode())
+	}
+	if got := <-gotAuth; got != "Basic "+base64.StdEncoding.EncodeToString([]byte("xogymodocopatu:JRWTMBI-UHD3TDC-EBZIFQN-JEIVIFE-GB1KISF-61G2CTD-ZDODDC3")) {
+		t.Fatalf("Proxy-Authorization = %q, want Basic ...", got)
 	}
 }

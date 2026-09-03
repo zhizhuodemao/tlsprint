@@ -5,6 +5,7 @@ import (
 	"context"
 	"crypto/tls"
 	"crypto/x509"
+	"encoding/base64"
 	"errors"
 	"fmt"
 	"io"
@@ -294,7 +295,14 @@ func (rt *roundTripper) dialRaw(ctx context.Context, network, addr string, proxy
 		}
 		pc = tlsConn
 	}
-	req := fmt.Sprintf("CONNECT %s HTTP/1.1\r\nHost: %s\r\n\r\n", addr, addr)
+	req := fmt.Sprintf("CONNECT %s HTTP/1.1\r\nHost: %s\r\n", addr, addr)
+	if proxy.User != nil {
+		// Basic proxy authentication: http(s)://user:password@host:port
+		pass, _ := proxy.User.Password()
+		auth := base64.StdEncoding.EncodeToString([]byte(proxy.User.Username() + ":" + pass))
+		req += fmt.Sprintf("Proxy-Authorization: Basic %s\r\n", auth)
+	}
+	req += "\r\n"
 	if _, err := pc.Write([]byte(req)); err != nil {
 		pc.Close()
 		return nil, fmt.Errorf("client: proxy CONNECT write: %w", err)

@@ -3,6 +3,15 @@
 All notable changes to tlsprint are documented here. This project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## [v1.0.2] - 2026-09-03
+
+### Fixed
+
+- **client**: HTTP proxies now support **username:password** in the URL
+  (`http://user:pass@host:port`). The tunnelled CONNECT request includes the
+  `Proxy-Authorization` header (Basic auth). Verified with an authenticated
+  CONNECT-proxy integration test.
+
 ## [v1.0.1] - 2026-09-03
 
 ### Fixed
