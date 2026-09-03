@@ -18,44 +18,6 @@ fingerprints, and drives real impersonated connections through uTLS with a
 
 ---
 
-## ✨ Highlights
-
-- **Pure Go, zero CGO.** The whole stack (TLS via uTLS, HTTP/2 via a forked
-  `x/net/http2`) builds anywhere with just a Go toolchain — no libcurl, no `.so`.
-- **Engine-independent data layer.** The root module has **zero third-party
-  dependencies** (stdlib only): fingerprints are plain, versioned, JSON data
-  that any engine (uTLS, tls-client, your own) can consume.
-- **Byte-exact TLS *and* HTTP/2 fingerprints.** JA3/JA4 match the capture, and
-  the HTTP/2 SETTINGS order, WINDOW_UPDATE, pseudo/header order and stream
-  priority reproduce the real browser (verified on `tls.peet.ws`).
-- **Bidirectional codecs.** Not just compute JA3/JA4 — `hello` parses and
-  marshals ClientHello bytes byte-for-byte, preserving unknown extensions.
-- **47 curated, verifiable presets** (Chrome incl. 152, Firefox, Safari, Edge,
-  Opera, curl, OkHttp, WeChat, …). Every preset passes an invariant test that
-  its lists re-derive the JA3 of its source capture.
-- **curl_cffi-style API** — pass the fingerprint directly on the call — plus a
-  fluent `R()` builder for advanced usage.
-- **Clean modularity, MIT license, and a reproducible data pipeline.**
-
----
-
-## 🏗️ Repository layout
-
-One repo, four Go modules. Dependency isolation keeps the core tiny.
-
-| Module | Purpose | Deps |
-| --- | --- | --- |
-| `tlsprint` (root) | `Profile` model, `iana` registries, `hello` wire codec, `ja3`/`ja4`, `preset` registry, CLI | **stdlib only** |
-| `tlsprint/utls` | Profile → uTLS `ClientHelloSpec` + `Dial`/`DialByName` | uTLS |
-| `tlsprint/client` | HTTP client (`Get`/`Post`/…) with preset fingerprints | utls + http2 fork |
-| `tlsprint/http2` | forked `x/net/http2` transport with a configurable byte-exact fingerprint | x/net |
-
-Root packages: `iana` (identifier registries & GREASE), `hello` (ClientHello
-parse/build), `ja3`, `ja4`, `preset` (embedded registry), `cmd/tlsprint` (CLI),
-`tools/importproteus` (data regeneration).
-
----
-
 ## 📦 Installation
 
 ```sh
@@ -152,6 +114,44 @@ ch, err := hello.Parse(capturedBytes)
 prof, _ := ch.TLSProfile()    // wire bytes → semantic profile
 fmt.Println(ja3.Compute(ch), ja4.Compute(ch))
 ```
+
+---
+
+## ✨ Highlights
+
+- **Pure Go, zero CGO.** The whole stack (TLS via uTLS, HTTP/2 via a forked
+  `x/net/http2`) builds anywhere with just a Go toolchain — no libcurl, no `.so`.
+- **Engine-independent data layer.** The root module has **zero third-party
+  dependencies** (stdlib only): fingerprints are plain, versioned, JSON data
+  that any engine (uTLS, tls-client, your own) can consume.
+- **Byte-exact TLS *and* HTTP/2 fingerprints.** JA3/JA4 match the capture, and
+  the HTTP/2 SETTINGS order, WINDOW_UPDATE, pseudo/header order and stream
+  priority reproduce the real browser (verified on `tls.peet.ws`).
+- **Bidirectional codecs.** Not just compute JA3/JA4 — `hello` parses and
+  marshals ClientHello bytes byte-for-byte, preserving unknown extensions.
+- **47 curated, verifiable presets** (Chrome incl. 152, Firefox, Safari, Edge,
+  Opera, curl, OkHttp, WeChat, …). Every preset passes an invariant test that
+  its lists re-derive the JA3 of its source capture.
+- **curl_cffi-style API** — pass the fingerprint directly on the call — plus a
+  fluent `R()` builder for advanced usage.
+- **Clean modularity, MIT license, and a reproducible data pipeline.**
+
+---
+
+## 🏗️ Repository layout
+
+One repo, four Go modules. Dependency isolation keeps the core tiny.
+
+| Module | Purpose | Deps |
+| --- | --- | --- |
+| `tlsprint` (root) | `Profile` model, `iana` registries, `hello` wire codec, `ja3`/`ja4`, `preset` registry, CLI | **stdlib only** |
+| `tlsprint/utls` | Profile → uTLS `ClientHelloSpec` + `Dial`/`DialByName` | uTLS |
+| `tlsprint/client` | HTTP client (`Get`/`Post`/…) with preset fingerprints | utls + http2 fork |
+| `tlsprint/http2` | forked `x/net/http2` transport with a configurable byte-exact fingerprint | x/net |
+
+Root packages: `iana` (identifier registries & GREASE), `hello` (ClientHello
+parse/build), `ja3`, `ja4`, `preset` (embedded registry), `cmd/tlsprint` (CLI),
+`tools/importproteus` (data regeneration).
 
 ---
 

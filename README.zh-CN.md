@@ -19,59 +19,6 @@ HTTP/2 行为、Header 顺序），支持 JA3/JA4 指纹计算、原始 ClientHe
 > ⚠️ 免责声明：本库仅用于 TLS 协议研究与反机器人指纹测试，请只对你有权
 > 测试的系统使用。
 
-## 亮点
-
-- **标准化的类型化指纹模型** `Profile`：有序标识符列表 + 明确的 GREASE 语义、
-  JSON 往返、校验；取代参考项目里散乱的字符串型配置。
-- **真实可用的编解码**：JA3 字符串 / md5、按 [JA4 规范](https://github.com/FoxIO-LLC/ja4)
-  实现并用规范自带样例向量验证的 JA4、以及字节级保真的 ClientHello **解析 ⇄
-  构造**（未知扩展原样保留）。
-- **精选指纹注册表**：46 个真实 profile（Chrome / Firefox / Safari / Edge /
-  Opera / curl / OkHttp / WeChat / Charles / Reqable / Fiddler / IE /
-  PowerShell），内嵌、带版本与出处，测试保证每个 profile 的列表能反推出其源
-  抓包的 JA3。
-- **拿来即用的 HTTP 客户端**：指纹真的上线——client/utls 的测试用本地回环
-  TLS 服务器真实握手并抓包，断言线上 ClientHello 的规范 JA3 与 preset 一致。
-- **分层干净**：根模块只依赖 Go 标准库；引擎/传输相关依赖都放在各自的可选
-  子模块里。
-
-## 为什么还要一个指纹库？
-
-这类项目要么 fork 了整个 TLS 栈（uTLS），要么把指纹配置格式和某个引擎绑死。
-本库把"指纹本身"抽成引擎无关的标准形态：
-
-| 关注点 | 参考项目做法 | tlsprint |
-| --- | --- | --- |
-| 指纹数据模型 | 字符串型配置（`JA3`/`ExtensionOrder`/`Curves` 字段） | 类型化有序列表 + 明确 GREASE 处理 |
-| GREASE | 每个引擎各自隐式规则 | 显式标记 + 符合规范的编解码 |
-| JA4 | 常常缺失或近似 | 按规范实现并以官方样例向量测试 |
-| 依赖 | 需要引擎（CGO/uTLS…） | 根模块仅标准库 |
-| 注册表 | Python 生成、庞大平铺 | 精选 46 条 + 可复现导入工具 |
-
-## 仓库结构
-
-一个仓库、三个 Go module。根模块**零第三方依赖**；两个子模块分别引入
-uTLS 与 HTTP 协议栈。
-
-| Module | 用途 |
-| --- | --- |
-| `github.com/lingulingo/tlsprint`（根） | `Profile` 模型、`iana` 注册表、`hello` 线格式编解码、`ja3`/`ja4`、`preset` 注册表、CLI |
-| `github.com/lingulingo/tlsprint/utls` | Profile → uTLS `ClientHelloSpec` + `Dial`/`DialByName` |
-| `github.com/lingulingo/tlsprint/client` | HTTP 客户端：带 preset 指纹的 `Get`/`Post`/... |
-
-根模块内部包：
-
-| 路径 | 说明 |
-| --- | --- |
-| 根包 | `Profile`/`TLSProfile`/`HTTP2Profile`/`HeaderProfile` + 校验 |
-| `tlsprint/iana` | 标识符注册表与 GREASE 语义（扩展/密码套件/曲线/签名算法/版本/H2 settings） |
-| `tlsprint/hello` | ClientHello 线格式解析/构造 |
-| `tlsprint/ja3` | JA3 规范字符串与 md5 |
-| `tlsprint/ja4` | JA4 指纹 |
-| `tlsprint/preset` | 精选指纹注册表（数据内嵌于 `preset/data`） |
-| `cmd/tlsprint` | CLI |
-| `tools/importproteus` | 数据再生成工具 |
-
 ## 安装
 
 ```sh
@@ -241,6 +188,59 @@ Response 方法（`*Response`，body 已读入内存）：
 > 与 HEADERS 字段顺序都跟真实 Chrome 152 抓包完全一致。
 
 ---
+
+## 亮点
+
+- **标准化的类型化指纹模型** `Profile`：有序标识符列表 + 明确的 GREASE 语义、
+  JSON 往返、校验；取代参考项目里散乱的字符串型配置。
+- **真实可用的编解码**：JA3 字符串 / md5、按 [JA4 规范](https://github.com/FoxIO-LLC/ja4)
+  实现并用规范自带样例向量验证的 JA4、以及字节级保真的 ClientHello **解析 ⇄
+  构造**（未知扩展原样保留）。
+- **精选指纹注册表**：46 个真实 profile（Chrome / Firefox / Safari / Edge /
+  Opera / curl / OkHttp / WeChat / Charles / Reqable / Fiddler / IE /
+  PowerShell），内嵌、带版本与出处，测试保证每个 profile 的列表能反推出其源
+  抓包的 JA3。
+- **拿来即用的 HTTP 客户端**：指纹真的上线——client/utls 的测试用本地回环
+  TLS 服务器真实握手并抓包，断言线上 ClientHello 的规范 JA3 与 preset 一致。
+- **分层干净**：根模块只依赖 Go 标准库；引擎/传输相关依赖都放在各自的可选
+  子模块里。
+
+## 为什么还要一个指纹库？
+
+这类项目要么 fork 了整个 TLS 栈（uTLS），要么把指纹配置格式和某个引擎绑死。
+本库把"指纹本身"抽成引擎无关的标准形态：
+
+| 关注点 | 参考项目做法 | tlsprint |
+| --- | --- | --- |
+| 指纹数据模型 | 字符串型配置（`JA3`/`ExtensionOrder`/`Curves` 字段） | 类型化有序列表 + 明确 GREASE 处理 |
+| GREASE | 每个引擎各自隐式规则 | 显式标记 + 符合规范的编解码 |
+| JA4 | 常常缺失或近似 | 按规范实现并以官方样例向量测试 |
+| 依赖 | 需要引擎（CGO/uTLS…） | 根模块仅标准库 |
+| 注册表 | Python 生成、庞大平铺 | 精选 46 条 + 可复现导入工具 |
+
+## 仓库结构
+
+一个仓库、三个 Go module。根模块**零第三方依赖**；两个子模块分别引入
+uTLS 与 HTTP 协议栈。
+
+| Module | 用途 |
+| --- | --- |
+| `github.com/lingulingo/tlsprint`（根） | `Profile` 模型、`iana` 注册表、`hello` 线格式编解码、`ja3`/`ja4`、`preset` 注册表、CLI |
+| `github.com/lingulingo/tlsprint/utls` | Profile → uTLS `ClientHelloSpec` + `Dial`/`DialByName` |
+| `github.com/lingulingo/tlsprint/client` | HTTP 客户端：带 preset 指纹的 `Get`/`Post`/... |
+
+根模块内部包：
+
+| 路径 | 说明 |
+| --- | --- |
+| 根包 | `Profile`/`TLSProfile`/`HTTP2Profile`/`HeaderProfile` + 校验 |
+| `tlsprint/iana` | 标识符注册表与 GREASE 语义（扩展/密码套件/曲线/签名算法/版本/H2 settings） |
+| `tlsprint/hello` | ClientHello 线格式解析/构造 |
+| `tlsprint/ja3` | JA3 规范字符串与 md5 |
+| `tlsprint/ja4` | JA4 指纹 |
+| `tlsprint/preset` | 精选指纹注册表（数据内嵌于 `preset/data`） |
+| `cmd/tlsprint` | CLI |
+| `tools/importproteus` | 数据再生成工具 |
 
 ## 底层用法
 
