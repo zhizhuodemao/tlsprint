@@ -28,6 +28,13 @@ fingerprints, and drives real impersonated connections through uTLS with a
 > anti-bot fingerprinting. Use it only against systems you own or are allowed
 > to test.
 
+> 🛡️ **Usage & ethics.** This library is for TLS-protocol research, authorized
+> testing, and defensive security research. **Use it only against systems you
+> own or are explicitly authorized to test**, and respect each site's Terms of
+> Service. Any use for unauthorized access, bypassing anti-bot protection you
+> are not permitted to circumvent, or causing harm is outside the intended
+> scope; misuse is your responsibility.
+
 ---
 
 ## 📦 Installation
