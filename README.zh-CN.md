@@ -384,6 +384,63 @@ TLS 指纹库大致分两类：**只有引擎**（给你一个 TLS 栈，其余�
 > （如 Akamai sensor、Cloudflare 托管挑战）任何 HTTP 客户端都解不了，需要无头
 > 浏览器/求解器 + 有效会话 cookie。
 
+## 支持的指纹
+
+以下每个预设都来自真实抓包,并通过不变量测试(列表能反推出源 JA3)。可按名字查询
+(`"chrome-152"`、`"firefox-145"`、`"curl"` = 各产品最新款...)。
+
+| Preset | Product | Platform | Version |
+|---|---|---|---|
+| `TLS_CHROME_130_MACOS_10_15_7` | chrome | macos | 130 |
+| `TLS_CHROME_131` | chrome | windows | 131 |
+| `TLS_CHROME_133` | chrome | windows | 133 |
+| `TLS_CHROME_135` | chrome | windows | 135 |
+| `TLS_CHROME_135_K_ANDROID_10` | chrome | android | 135 |
+| `TLS_CHROME_138` | chrome | windows | 138 |
+| `TLS_CHROME_140` | chrome | windows | 140 |
+| `TLS_CHROME_140_K_ANDROID_10` | chrome | android | 140 |
+| `TLS_CHROME_141` | chrome | windows | 141 |
+| `TLS_CHROME_141_MACOS_10_15_7` | chrome | macos | 141 |
+| `TLS_CHROME_142_MACOS_10_15_7` | chrome | macos | 142 |
+| `TLS_CHROME_143_MACOS_15_05` | chrome | macos | 143 |
+| `TLS_CHROME_144_MACOS_10_15_7` | chrome | macos | 144 |
+| `TLS_CHROME_149_0_7827_197_MACOS_10_15_7` | chrome | macos | 149.0.7827.197 |
+| `TLS_CHROME_152_MACOS_10_15_7` | chrome | macos | 152 |
+| `TLS_FIREFOX_115` | firefox | windows | 115 |
+| `TLS_FIREFOX_126` | firefox | windows | 126 |
+| `TLS_FIREFOX_135` | firefox | windows | 135 |
+| `TLS_FIREFOX_143` | firefox | windows | 143 |
+| `TLS_FIREFOX_145` | firefox | windows | 145 |
+| `TLS_FIREFOX_151_WINDOWS` | firefox | windows | 151 |
+| `TLS_SAFARI_16_5_1_MACOS_10_15_7` | safari | macos | 16.5.1 |
+| `TLS_SAFARI_18_1_MACOS_10_15_7` | safari | macos | 18.1 |
+| `TLS_SAFARI_18_4_MACOS_10_15_7` | safari | macos | 18.4 |
+| `TLS_SAFARI_18_6_IPHONE_IOS_18_6` | safari | ios | 18.6 |
+| `TLS_SAFARI_26_0_MACOS_10_15_7` | safari | macos | 26.0 |
+| `TLS_SAFARI_26_0_1_MACOS_18_3` | safari | macos | 26.0.1 |
+| `TLS_EDGE_131` | edge | windows | 131 |
+| `TLS_EDGE_141` | edge | windows | 141 |
+| `TLS_EDGE_144_MACOS_10_15_7` | edge | macos | 144 |
+| `TLS_EDGE_150_MACOS_10_15_7` | edge | macos | 150 |
+| `TLS_OPR_109` | opera | windows | 109 |
+| `TLS_OPR_110` | opera | windows | 110 |
+| `TLS_OPR_116` | opera | windows | 116 |
+| `TLS_CURL_8_13_0` | curl | — | 8.13.0 |
+| `TLS_CURL_8_15_0` | curl | — | 8.15.0 |
+| `TLS_CURL_8_16_0` | curl | — | 8.16.0 |
+| `TLS_CURL_8_4_0` | curl | — | 8.4.0 |
+| `TLS_CURL_8_7_1` | curl | — | 8.7.1 |
+| `TLS_CURL_8_9_1` | curl | — | 8.9.1 |
+| `TLS_OKHTTP_3_12_12` | okhttp | android | 3.12.12 |
+| `TLS_WECHAT_8_0_64_IPHONE_IOS_18_6_2` | wechat | ios | 8.0.64 |
+| `TLS_POWERSHELL_7_5_3` | powershell | windows | 7.5.3 |
+| `TLS_IE_11` | ie | windows | 11 |
+| `TLS_CHARLES_5_0_1_CHROME_142` | charles | windows | 5.0.1 |
+| `TLS_REQABLE_2_33_7_CHROME_122` | reqable | windows | 2.33.7 |
+| `TLS_FIDDLER_5_0_20253_3311_CHROME_122` | fiddler | windows | 5.0.20253.3311 |
+
+---
+
 ## 数据出处与再生成
 
 `preset/data` 中精选的指纹来自 curl_cffi/curl-impersonate `tls_config`
@@ -421,3 +478,17 @@ make test-client  # client 模块测试
 
 MIT —— 见 [LICENSE](LICENSE)。浏览器/产品名称与商标归各自所有者所有，此处
 仅用于描述被观测的流量特征。
+
+
+---
+
+## ⭐ 支持这个项目
+
+如果 **tlsprint** 帮到了你——不管是省了你一个 HTTP 客户端、让你的爬虫更像真实
+浏览器,还是单纯喜欢干净的 Go 指纹库——请给它点个 **star** ⭐!
+
+- ⭐ **Star 本仓库**——免费,但能让更多人看到它有用。
+- 🐞 **提 Issue**——报 bug、要新的指纹预设。
+- 🤝 **提 PR**——更多预设、更好的 HTTP/2 保真度、文档。
+
+每个 star 都是我坚持更新的动力,谢谢!🙌

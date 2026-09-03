@@ -260,6 +260,64 @@ the two: a **standard data layer** plus **optional, byte-exact engines**.
 
 ---
 
+## 🧬 Supported fingerprints
+
+Every preset is a real capture and passes the invariant test that its lists
+re-derive the JA3 of the source. Look one up by name (`"chrome-152"`,
+`"firefox-145"`, `"curl"` = newest of a product, ...).
+
+| Preset | Product | Platform | Version |
+|---|---|---|---|
+| `TLS_CHROME_130_MACOS_10_15_7` | chrome | macos | 130 |
+| `TLS_CHROME_131` | chrome | windows | 131 |
+| `TLS_CHROME_133` | chrome | windows | 133 |
+| `TLS_CHROME_135` | chrome | windows | 135 |
+| `TLS_CHROME_135_K_ANDROID_10` | chrome | android | 135 |
+| `TLS_CHROME_138` | chrome | windows | 138 |
+| `TLS_CHROME_140` | chrome | windows | 140 |
+| `TLS_CHROME_140_K_ANDROID_10` | chrome | android | 140 |
+| `TLS_CHROME_141` | chrome | windows | 141 |
+| `TLS_CHROME_141_MACOS_10_15_7` | chrome | macos | 141 |
+| `TLS_CHROME_142_MACOS_10_15_7` | chrome | macos | 142 |
+| `TLS_CHROME_143_MACOS_15_05` | chrome | macos | 143 |
+| `TLS_CHROME_144_MACOS_10_15_7` | chrome | macos | 144 |
+| `TLS_CHROME_149_0_7827_197_MACOS_10_15_7` | chrome | macos | 149.0.7827.197 |
+| `TLS_CHROME_152_MACOS_10_15_7` | chrome | macos | 152 |
+| `TLS_FIREFOX_115` | firefox | windows | 115 |
+| `TLS_FIREFOX_126` | firefox | windows | 126 |
+| `TLS_FIREFOX_135` | firefox | windows | 135 |
+| `TLS_FIREFOX_143` | firefox | windows | 143 |
+| `TLS_FIREFOX_145` | firefox | windows | 145 |
+| `TLS_FIREFOX_151_WINDOWS` | firefox | windows | 151 |
+| `TLS_SAFARI_16_5_1_MACOS_10_15_7` | safari | macos | 16.5.1 |
+| `TLS_SAFARI_18_1_MACOS_10_15_7` | safari | macos | 18.1 |
+| `TLS_SAFARI_18_4_MACOS_10_15_7` | safari | macos | 18.4 |
+| `TLS_SAFARI_18_6_IPHONE_IOS_18_6` | safari | ios | 18.6 |
+| `TLS_SAFARI_26_0_MACOS_10_15_7` | safari | macos | 26.0 |
+| `TLS_SAFARI_26_0_1_MACOS_18_3` | safari | macos | 26.0.1 |
+| `TLS_EDGE_131` | edge | windows | 131 |
+| `TLS_EDGE_141` | edge | windows | 141 |
+| `TLS_EDGE_144_MACOS_10_15_7` | edge | macos | 144 |
+| `TLS_EDGE_150_MACOS_10_15_7` | edge | macos | 150 |
+| `TLS_OPR_109` | opera | windows | 109 |
+| `TLS_OPR_110` | opera | windows | 110 |
+| `TLS_OPR_116` | opera | windows | 116 |
+| `TLS_CURL_8_13_0` | curl | — | 8.13.0 |
+| `TLS_CURL_8_15_0` | curl | — | 8.15.0 |
+| `TLS_CURL_8_16_0` | curl | — | 8.16.0 |
+| `TLS_CURL_8_4_0` | curl | — | 8.4.0 |
+| `TLS_CURL_8_7_1` | curl | — | 8.7.1 |
+| `TLS_CURL_8_9_1` | curl | — | 8.9.1 |
+| `TLS_OKHTTP_3_12_12` | okhttp | android | 3.12.12 |
+| `TLS_WECHAT_8_0_64_IPHONE_IOS_18_6_2` | wechat | ios | 8.0.64 |
+| `TLS_POWERSHELL_7_5_3` | powershell | windows | 7.5.3 |
+| `TLS_IE_11` | ie | windows | 11 |
+| `TLS_CHARLES_5_0_1_CHROME_142` | charles | windows | 5.0.1 |
+| `TLS_REQABLE_2_33_7_CHROME_122` | reqable | windows | 2.33.7 |
+| `TLS_FIDDLER_5_0_20253_3311_CHROME_122` | fiddler | windows | 5.0.20253.3311 |
+
+---
+
 ## 🔬 HTTP/2 fingerprint fidelity
 
 The `client` uses the forked `tlsprint/http2` transport, whose `Fingerprint`
@@ -347,3 +405,19 @@ MIT — see [LICENSE](LICENSE). The `http2` fork is derived from
 `golang.org/x/net/http2` (BSD-3-Clause, The Go Authors; see `http2/NOTICE`).
 Browser/product names and trademarks belong to their respective owners and are
 used only to describe observed traffic.
+
+
+---
+
+## ⭐ Support the project
+
+If **tlsprint** helped you — saved you an HTTP client, made your scraper look
+like a real browser, or you simply enjoy clean Go fingerprinting — please give
+it a **star** ⭐!
+
+- ⭐ **Star the repo** — it's free and signals to others that it's useful.
+- 🐞 **Report bugs / request presets** via Issues. New browser fingerprints are
+  the fastest way to help.
+- 🤝 **Open a PR** — more presets, better HTTP/2 fidelity, docs.
+
+Every star keeps this project alive. Thank you!
