@@ -1,0 +1,5870 @@
+{
+  "source": "curated client fingerprints; includes a Chrome 152 capture from tls.peet.ws",
+  "presets": [
+    {
+      "key": "TLS_CHARLES_5_0_1_CHROME_142",
+      "id": "6587c59f-9821-4a2b-a34b-049ca5c485ad",
+      "product": "charles",
+      "platform": "windows",
+      "version": "5.0.1",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          0,
+          5,
+          10,
+          11,
+          16,
+          17,
+          23,
+          35,
+          13,
+          43,
+          45,
+          50,
+          51,
+          65281
+        ],
+        "supported_groups": [
+          29,
+          23,
+          24,
+          25,
+          30,
+          256,
+          257,
+          258,
+          259,
+          260
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          1283,
+          1539,
+          2055,
+          2055,
+          2052,
+          2053,
+          2054,
+          2057,
+          2058,
+          2059,
+          1025,
+          1281,
+          1537,
+          1026,
+          771,
+          769,
+          770,
+          515,
+          513,
+          514
+        ],
+        "disable_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-16-17-23-35-13-43-45-50-51-65281,29-23-24-25-30-256-257-258-259-260,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ]
+      },
+      "headers": {
+        "order": [
+          "cache-control",
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_130_MACOS_10_15_7",
+      "id": "cffd2cf1-c120-4561-9ecc-44aed3e2176b",
+      "product": "chrome",
+      "platform": "macos",
+      "version": "130",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          11,
+          10,
+          16,
+          23,
+          5,
+          0,
+          45,
+          43,
+          65281,
+          35,
+          18,
+          17513,
+          65037,
+          13,
+          51,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "random_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,11-10-16-23-5-0-45-43-65281-35-18-17513-65037-13-51-41,29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 3,
+            "value": 1000
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          },
+          {
+            "id": 51898,
+            "value": 3641171202
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 UCPC/1.1.0.12"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_131",
+      "id": "6125808d-ccc4-4f4b-9b26-e0c7abd3b279",
+      "product": "chrome",
+      "platform": "windows",
+      "version": "131",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          45,
+          10,
+          23,
+          35,
+          27,
+          16,
+          18,
+          13,
+          17513,
+          65037,
+          11,
+          51,
+          65281,
+          5,
+          0,
+          43,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "random_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,45-10-23-35-27-16-18-13-17513-65037-11-51-65281-5-0-43-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "cache-control",
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_133",
+      "id": "5759d36b-38b6-4141-8b9e-c89d7be00ab2",
+      "product": "chrome",
+      "platform": "windows",
+      "version": "133",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4867,
+          4865,
+          4866,
+          52393,
+          52392,
+          49195,
+          49199,
+          49196,
+          49200,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          11,
+          17613,
+          27,
+          16,
+          23,
+          10,
+          43,
+          65281,
+          5,
+          35,
+          0,
+          65037,
+          45,
+          51,
+          18,
+          13,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "random_grease": true,
+        "ja3": "771,4867-4865-4866-52393-52392-49195-49199-49196-49200-49171-49172-156-157-47-53,11-17613-27-16-23-10-43-65281-5-35-0-65037-45-51-18-13-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_135",
+      "id": "de2cd45c-ad7b-4eed-b590-94c9ef19a483",
+      "product": "chrome",
+      "platform": "windows",
+      "version": "135",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          0,
+          35,
+          18,
+          13,
+          16,
+          5,
+          43,
+          27,
+          10,
+          23,
+          45,
+          51,
+          65281,
+          17613,
+          11,
+          65037,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "random_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-35-18-13-16-5-43-27-10-23-45-51-65281-17613-11-65037-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "dnt",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_135_K_ANDROID_10",
+      "id": "09eaa2d5-f1f6-495f-b762-411b19ca027e",
+      "product": "chrome",
+      "platform": "android",
+      "version": "135",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          65281,
+          45,
+          65037,
+          10,
+          43,
+          27,
+          0,
+          16,
+          13,
+          18,
+          5,
+          51,
+          35,
+          23,
+          17613,
+          11,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "random_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65281-45-65037-10-43-27-0-16-13-18-5-51-35-23-17613-11-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_138",
+      "id": "726e01cd-2666-4430-89ea-09b91015a28b",
+      "product": "chrome",
+      "platform": "windows",
+      "version": "138",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          23,
+          5,
+          17613,
+          11,
+          27,
+          10,
+          35,
+          45,
+          18,
+          51,
+          13,
+          0,
+          65281,
+          16,
+          43,
+          65037,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "random_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,23-5-17613-11-27-10-35-45-18-51-13-0-65281-16-43-65037-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_140",
+      "id": "7430b911-f64b-4b87-9b89-96276a58bc80",
+      "product": "chrome",
+      "platform": "windows",
+      "version": "140",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          35,
+          0,
+          45,
+          23,
+          5,
+          65037,
+          18,
+          17613,
+          10,
+          13,
+          11,
+          51,
+          27,
+          16,
+          65281,
+          43
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,35-0-45-23-5-65037-18-17613-10-13-11-51-27-16-65281-43,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_140_K_ANDROID_10",
+      "id": "2daaf034-542c-4182-b80c-6de87bd48b88",
+      "product": "chrome",
+      "platform": "android",
+      "version": "140",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          0,
+          5,
+          10,
+          11,
+          13,
+          50,
+          16,
+          17,
+          23,
+          43,
+          65281,
+          41
+        ],
+        "supported_groups": [
+          29,
+          23,
+          24,
+          25,
+          30
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          1283,
+          1539,
+          2052,
+          2053,
+          2054,
+          2057,
+          2058,
+          2059,
+          1025,
+          1281,
+          1537,
+          1026,
+          771,
+          769,
+          770,
+          515,
+          513,
+          514
+        ],
+        "random_grease": true,
+        "disable_grease": true,
+        "ja3": "771,49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-10-11-13-50-16-17-23-43-65281-41,29-23-24-25-30,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ]
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_141",
+      "id": "6125808d-ccc4-4f4b-9b26-e0c7abd3b279",
+      "product": "chrome",
+      "platform": "windows",
+      "version": "141",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          45,
+          10,
+          23,
+          35,
+          27,
+          16,
+          18,
+          13,
+          17613,
+          65037,
+          11,
+          51,
+          65281,
+          5,
+          0,
+          43,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "random_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,45-10-23-35-27-16-18-13-17613-65037-11-51-65281-5-0-43-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "cache-control",
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_141_MACOS_10_15_7",
+      "id": "19cf3130-8505-465e-a71d-78aae3a8b594",
+      "product": "chrome",
+      "platform": "macos",
+      "version": "141",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          43,
+          35,
+          65281,
+          18,
+          5,
+          0,
+          51,
+          27,
+          17613,
+          65037,
+          45,
+          13,
+          10,
+          16,
+          23,
+          11,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "random_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,43-35-65281-18-5-0-51-27-17613-65037-45-13-10-16-23-11-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority",
+          "origin"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_142_MACOS_10_15_7",
+      "id": "chrome142-macos-10-15-7",
+      "product": "chrome",
+      "platform": "macos",
+      "version": "142",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          51,
+          18,
+          65281,
+          16,
+          5,
+          23,
+          45,
+          43,
+          0,
+          17613,
+          35,
+          10,
+          27,
+          65037,
+          11,
+          13,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "random_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,51-18-65281-16-5-23-45-43-0-17613-35-10-27-65037-11-13-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "headers_stream_id": 1,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "zh-CN,zh;q=0.9",
+          "Priority": "u=0, i",
+          "Sec-Ch-Ua": "\\\"Chromium\\\";v=\\\"142\\\", \\\"Google Chrome\\\";v=\\\"142\\\", \\\"Not_A Brand\\\";v=\\\"99\\",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "Sec-Ch-Ua-Platform": "\\\"macOS\\",
+          "Sec-Fetch-Dest": "document",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-Site": "none",
+          "Sec-Fetch-User": "?1",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_143_MACOS_15_05",
+      "product": "chrome",
+      "platform": "macos",
+      "version": "143",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          27,
+          11,
+          10,
+          13,
+          0,
+          16,
+          23,
+          17613,
+          51,
+          43,
+          65037,
+          45,
+          18,
+          35,
+          5,
+          65281,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,27-11-10-13-0-16-23-17613-51-43-65037-45-18-35-5-65281-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "headers_stream_id": 1,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "user-agent",
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,ar-MA;q=0.6,ar;q=0.5,zh-TW;q=0.4",
+          "Priority": "u=0, i",
+          "Sec-Ch-Ua": "\\\"Google Chrome\\\";v=\\\"143\\\", \\\"Chromium\\\";v=\\\"143\\\", \\\"Not A(Brand\\\";v=\\\"24\\\"",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "Sec-Ch-Ua-Platform": "\\\"macOS\\\"",
+          "Sec-Fetch-Dest": "document",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-Site": "none",
+          "Sec-Fetch-User": "?1",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_144_MACOS_10_15_7",
+      "product": "chrome",
+      "platform": "macos",
+      "version": "144",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          23,
+          27,
+          13,
+          17613,
+          65037,
+          16,
+          5,
+          10,
+          0,
+          51,
+          43,
+          45,
+          65281,
+          11,
+          18,
+          35,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,23-27-13-17613-65037-16-5-10-0-51-43-45-65281-11-18-35-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "headers_stream_id": 1,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7,ar-MA;q=0.6,ar;q=0.5,zh-TW;q=0.4",
+          "Priority": "u=0, i",
+          "Sec-Ch-Ua": "\\\"Not(A:Brand\\\";v=\\\"8\\\", \\\"Chromium\\\";v=\\\"144\\\", \\\"Google Chrome\\\";v=\\\"144\\\"",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "Sec-Ch-Ua-Platform": "\\\"macOS\\\"",
+          "Sec-Fetch-Dest": "document",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-Site": "none",
+          "Sec-Fetch-User": "?1",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_149_0_7827_197_MACOS_10_15_7",
+      "product": "chrome",
+      "platform": "macos",
+      "version": "149.0.7827.197",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          18,
+          43,
+          35,
+          16,
+          11,
+          17613,
+          13,
+          5,
+          65037,
+          27,
+          10,
+          23,
+          45,
+          0,
+          65281,
+          51,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,18-43-35-16-11-17613-13-5-65037-27-10-23-45-0-65281-51-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "headers_stream_id": 1,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,ar;q=0.6,zh-TW;q=0.5",
+          "Priority": "u=0, i",
+          "Sec-Ch-Ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "Sec-Ch-Ua-Platform": "\"macOS\"",
+          "Sec-Fetch-Dest": "document",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-Site": "none",
+          "Sec-Fetch-User": "?1",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_CHROME_152_MACOS_10_15_7",
+      "id": "tls.peet.ws-chrome-152-macos",
+      "product": "chrome",
+      "platform": "macos",
+      "version": "152",
+      "description": "Chrome 152 macOS, captured from a tls.peet.ws fingerprint snapshot",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          45,
+          17613,
+          13,
+          43,
+          10,
+          0,
+          51764,
+          18,
+          51,
+          35,
+          27,
+          11,
+          5,
+          65281,
+          16,
+          65037,
+          23,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": [
+          0
+        ],
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          2570,
+          2308,
+          2309,
+          2310,
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "psk_key_exchange_modes": [
+          1
+        ],
+        "cert_compression": [
+          2
+        ],
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,45-17613-13-43-10-0-51764-18-51-35-27-11-5-65281-16-65037-23-41,4588-29-23-24,0",
+        "extra_extensions": {
+          "51764": "ALgIg5pkjJstAQkIg5pkjJstARIFgt8TAhQIg5pkjJstAQcFgt8TAg4Ig5pkjJstAQgFgt8TAgEE1nkJCgiDmmSMmy0BEwTWeQkHBNZ5CQ0Fgt8TAgYFgt8TAg8E1nkJCAWC3xMCEgTWeQkFCIOaZIybLQEKBNZ5CQwIg5pkjJstAQ0Fgt8TAhME1nkJCwiDmmSMmy0BCwTWeQkPBNZ5CQQE1nkJAQTWeQkGCIOaZIybLQEMBYLfEwIN"
+        }
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "Sec-Ch-Ua": "\"Chromium\";v=\"152\", \"Not?A_Brand\";v=\"24\", \"Google Chrome\";v=\"152\"",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "Sec-Ch-Ua-Platform": "\"macOS\"",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "Sec-Fetch-Site": "none",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-User": "?1",
+          "Sec-Fetch-Dest": "document",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "zh-CN,zh;q=0.9",
+          "Priority": "u=0, i"
+        }
+      }
+    },
+    {
+      "key": "TLS_CURL_8_13_0",
+      "id": "eb2b9840-7c28-4224-b167-6f10e52e0255",
+      "product": "curl",
+      "version": "8.13.0",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          49196,
+          49195,
+          49200,
+          49199,
+          159,
+          158,
+          49188,
+          49187,
+          49192,
+          49191,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          61,
+          60,
+          53,
+          47,
+          10
+        ],
+        "extensions": [
+          0,
+          5,
+          10,
+          11,
+          13,
+          35,
+          16,
+          23,
+          65281
+        ],
+        "supported_groups": [
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "signature_algorithms": [
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          513,
+          1027,
+          1283,
+          515,
+          514,
+          1537,
+          1539
+        ],
+        "disable_grease": true,
+        "ja3": "771,49196-49195-49200-49199-159-158-49188-49187-49192-49191-49162-49161-49172-49171-157-156-61-60-53-47-10,0-5-10-11-13-35-16-23-65281,29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 3,
+            "value": 100
+          },
+          {
+            "id": 4,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          }
+        ],
+        "window_update": 1048510465,
+        "pseudo_header_order": [
+          ":method",
+          ":path",
+          ":scheme",
+          ":authority"
+        ]
+      },
+      "headers": {
+        "values": {
+          "User-Agent": "curl/8.13.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_CURL_8_15_0",
+      "id": "aebaacf2-22e6-4fc3-9028-bc8bd227017b",
+      "product": "curl",
+      "version": "8.15.0",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          49196,
+          49195,
+          49200,
+          49199,
+          159,
+          158,
+          49188,
+          49187,
+          49192,
+          49191,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          61,
+          60,
+          53,
+          47,
+          10
+        ],
+        "extensions": [
+          0,
+          5,
+          10,
+          11,
+          13,
+          35,
+          16,
+          23,
+          65281
+        ],
+        "supported_groups": [
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "signature_algorithms": [
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          513,
+          1027,
+          1283,
+          515,
+          514,
+          1537,
+          1539
+        ],
+        "disable_grease": true,
+        "ja3": "771,49196-49195-49200-49199-159-158-49188-49187-49192-49191-49162-49161-49172-49171-157-156-61-60-53-47-10,0-5-10-11-13-35-16-23-65281,29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 3,
+            "value": 100
+          },
+          {
+            "id": 4,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          }
+        ],
+        "window_update": 1048510465,
+        "pseudo_header_order": [
+          ":method",
+          ":scheme",
+          ":authority",
+          ":path"
+        ]
+      },
+      "headers": {
+        "values": {
+          "User-Agent": "curl/8.15.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_CURL_8_16_0",
+      "id": "6eab1318-b455-4183-adaf-bb5634357697",
+      "product": "curl",
+      "version": "8.16.0",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4866,
+          4865,
+          49196,
+          49195,
+          49200,
+          49199,
+          49188,
+          49187,
+          49192,
+          49191,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          61,
+          60,
+          53,
+          47
+        ],
+        "extensions": [
+          0,
+          5,
+          43,
+          13,
+          35,
+          10,
+          11,
+          16,
+          51,
+          49,
+          23,
+          65281,
+          45
+        ],
+        "supported_groups": [
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          513,
+          1027,
+          1283,
+          515,
+          514,
+          1537,
+          1539
+        ],
+        "disable_grease": true,
+        "ja3": "771,4866-4865-49196-49195-49200-49199-49188-49187-49192-49191-49162-49161-49172-49171-157-156-61-60-53-47,0-5-43-13-35-10-11-16-51-49-23-65281-45,29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 3,
+            "value": 100
+          },
+          {
+            "id": 4,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          }
+        ],
+        "window_update": 1048510465,
+        "pseudo_header_order": [
+          ":method",
+          ":scheme",
+          ":authority",
+          ":path"
+        ]
+      },
+      "headers": {
+        "values": {
+          "User-Agent": "curl/8.16.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_CURL_8_4_0",
+      "id": "d6b94586-a3a0-4af6-b10e-0a2b9c1d4524",
+      "product": "curl",
+      "version": "8.4.0",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          49196,
+          49195,
+          49200,
+          49199,
+          159,
+          158,
+          49188,
+          49187,
+          49192,
+          49191,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          61,
+          60,
+          53,
+          47,
+          10
+        ],
+        "extensions": [
+          0,
+          5,
+          10,
+          11,
+          13,
+          35,
+          16,
+          23,
+          65281
+        ],
+        "supported_groups": [
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "signature_algorithms": [
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          513,
+          1027,
+          1283,
+          515,
+          514,
+          1537,
+          1539
+        ],
+        "disable_grease": true,
+        "ja3": "771,49196-49195-49200-49199-159-158-49188-49187-49192-49191-49162-49161-49172-49171-157-156-61-60-53-47-10,0-5-10-11-13-35-16-23-65281,29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 3,
+            "value": 100
+          },
+          {
+            "id": 4,
+            "value": 10485760
+          },
+          {
+            "id": 2,
+            "value": 0
+          }
+        ],
+        "window_update": 1048510465,
+        "pseudo_header_order": [
+          ":method",
+          ":path",
+          ":scheme",
+          ":authority"
+        ]
+      },
+      "headers": {
+        "values": {
+          "User-Agent": "curl/8.4.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_CURL_8_7_1",
+      "id": "b5785ae5-6882-4f42-8647-89151d75537b",
+      "product": "curl",
+      "version": "8.7.1",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4867,
+          4866,
+          4865,
+          52393,
+          52392,
+          52394,
+          49200,
+          49196,
+          49192,
+          49188,
+          49172,
+          49162,
+          159,
+          107,
+          57,
+          65413,
+          196,
+          136,
+          129,
+          157,
+          61,
+          53,
+          192,
+          132,
+          49199,
+          49195,
+          49191,
+          49187,
+          49171,
+          49161,
+          158,
+          103,
+          51,
+          190,
+          69,
+          156,
+          60,
+          47,
+          186,
+          65,
+          49169,
+          49159,
+          5,
+          4,
+          49170,
+          49160,
+          22,
+          10,
+          255
+        ],
+        "extensions": [
+          43,
+          51,
+          0,
+          11,
+          10,
+          13,
+          16
+        ],
+        "supported_groups": [
+          29,
+          23,
+          24,
+          25
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          772,
+          771,
+          770,
+          769
+        ],
+        "signature_algorithms": [
+          2054,
+          1537,
+          1539,
+          2053,
+          1281,
+          1283,
+          2052,
+          1025,
+          1027,
+          513,
+          515
+        ],
+        "disable_grease": true,
+        "ja3": "771,4867-4866-4865-52393-52392-52394-49200-49196-49192-49188-49172-49162-159-107-57-65413-196-136-129-157-61-53-192-132-49199-49195-49191-49187-49171-49161-158-103-51-190-69-156-60-47-186-65-49169-49159-5-4-49170-49160-22-10-255,43-51-0-11-10-13-16,29-23-24-25,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 3,
+            "value": 100
+          },
+          {
+            "id": 4,
+            "value": 10485760
+          },
+          {
+            "id": 2,
+            "value": 0
+          }
+        ],
+        "window_update": 1048510465,
+        "pseudo_header_order": [
+          ":method",
+          ":scheme",
+          ":authority",
+          ":path"
+        ]
+      },
+      "headers": {
+        "order": [
+          "user-agent",
+          "accept"
+        ],
+        "values": {
+          "User-Agent": "curl/8.7.1"
+        }
+      }
+    },
+    {
+      "key": "TLS_CURL_8_9_1",
+      "id": "529a129d-c264-445b-859a-6622a18a815e",
+      "product": "curl",
+      "version": "8.9.1",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4866,
+          4865,
+          49196,
+          49195,
+          49200,
+          49199,
+          49188,
+          49187,
+          49192,
+          49191,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          61,
+          60,
+          53,
+          47
+        ],
+        "extensions": [
+          0,
+          5,
+          43,
+          13,
+          35,
+          10,
+          11,
+          16,
+          51,
+          49,
+          23,
+          65281,
+          45
+        ],
+        "supported_groups": [
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          772,
+          771,
+          770,
+          769
+        ],
+        "signature_algorithms": [
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          513,
+          1027,
+          1283,
+          515,
+          514,
+          1537,
+          1539
+        ],
+        "disable_grease": true,
+        "ja3": "771,4866-4865-49196-49195-49200-49199-49188-49187-49192-49191-49162-49161-49172-49171-157-156-61-60-53-47,0-5-43-13-35-10-11-16-51-49-23-65281-45,29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 3,
+            "value": 100
+          },
+          {
+            "id": 4,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          }
+        ],
+        "window_update": 1048510465,
+        "pseudo_header_order": [
+          ":method",
+          ":path",
+          ":scheme",
+          ":authority"
+        ]
+      },
+      "headers": {
+        "values": {
+          "User-Agent": "curl/8.13.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_EDGE_131",
+      "id": "3122d7de-081b-44d0-b68d-8ac227d3fcb7",
+      "product": "edge",
+      "platform": "windows",
+      "version": "131",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          65281,
+          17513,
+          13,
+          65037,
+          43,
+          5,
+          35,
+          16,
+          11,
+          10,
+          23,
+          51,
+          0,
+          18,
+          45,
+          27,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "random_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65281-17513-13-65037-43-5-35-16-11-10-23-51-0-18-45-27-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "cache-control",
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_EDGE_141",
+      "id": "e30f906e-1b5c-4d6c-8b8a-6255dcf85809",
+      "product": "edge",
+      "platform": "windows",
+      "version": "141",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          65281,
+          17613,
+          13,
+          65037,
+          43,
+          5,
+          35,
+          16,
+          11,
+          10,
+          23,
+          51,
+          0,
+          18,
+          45,
+          27,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "random_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65281-17613-13-65037-43-5-35-16-11-10-23-51-0-18-45-27-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "cache-control",
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_EDGE_144_MACOS_10_15_7",
+      "product": "edge",
+      "platform": "macos",
+      "version": "144",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          0,
+          5,
+          23,
+          65281,
+          11,
+          65037,
+          45,
+          13,
+          16,
+          17613,
+          18,
+          35,
+          51,
+          43,
+          10,
+          27
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-5-23-65281-11-65037-45-13-16-17613-18-35-51-43-10-27,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "headers_stream_id": 1,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
+          "Priority": "u=0, i",
+          "Sec-Ch-Ua": "\\\"Not(A:Brand\\\";v=\\\"8\\\", \\\"Chromium\\\";v=\\\"144\\\", \\\"Microsoft Edge\\\";v=\\\"144\\\"",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "Sec-Ch-Ua-Platform": "\\\"macOS\\\"",
+          "Sec-Fetch-Dest": "document",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-Site": "none",
+          "Sec-Fetch-User": "?1",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_EDGE_150_MACOS_10_15_7",
+      "product": "edge",
+      "platform": "macos",
+      "version": "150",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          35,
+          10,
+          18,
+          0,
+          51,
+          65281,
+          11,
+          45,
+          43,
+          23,
+          65037,
+          16,
+          27,
+          5,
+          13,
+          17613
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          2308,
+          2309,
+          2310,
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,35-10-18-0-51-65281-11-45-43-23-65037-16-27-5-13-17613,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "headers_stream_id": 1,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
+          "Priority": "u=0, i",
+          "Sec-Ch-Ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Microsoft Edge\";v=\"150\"",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "Sec-Ch-Ua-Platform": "\"macOS\"",
+          "Sec-Fetch-Dest": "document",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-Site": "none",
+          "Sec-Fetch-User": "?1",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_FIDDLER_5_0_20253_3311_CHROME_122",
+      "id": "637dbdf2-8e26-4999-b945-a3b7b56535e3",
+      "product": "fiddler",
+      "platform": "windows",
+      "version": "5.0.20253.3311",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          49196,
+          49195,
+          49200,
+          49199,
+          159,
+          158,
+          49188,
+          49187,
+          49192,
+          49191,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          61,
+          60,
+          53,
+          47,
+          10
+        ],
+        "extensions": [
+          0,
+          10,
+          11,
+          13,
+          35,
+          23,
+          65281
+        ],
+        "supported_groups": [
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "signature_algorithms": [
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          513,
+          1027,
+          1283,
+          515,
+          514,
+          1537,
+          1539
+        ],
+        "disable_grease": true,
+        "ja3": "771,49196-49195-49200-49199-159-158-49188-49187-49192-49191-49162-49161-49172-49171-157-156-61-60-53-47-10,0-10-11-13-35-23-65281,29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 3,
+            "value": 1000
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.95 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_FIREFOX_115",
+      "id": "860b913a-a797-45fc-b2bf-5c1d1cbca268",
+      "product": "firefox",
+      "platform": "windows",
+      "version": "115",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4867,
+          4866,
+          49195,
+          49199,
+          52393,
+          52392,
+          49196,
+          49200,
+          156,
+          157
+        ],
+        "extensions": [
+          0,
+          23,
+          65281,
+          10,
+          11,
+          16,
+          5,
+          34,
+          51,
+          43,
+          13,
+          28,
+          21
+        ],
+        "supported_groups": [
+          29,
+          23,
+          24,
+          25,
+          256,
+          257
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          1283,
+          1539,
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          1537,
+          515,
+          513
+        ],
+        "delegated_credentials": [
+          1027,
+          1283,
+          1539,
+          515
+        ],
+        "record_size_limit": 4001,
+        "disable_grease": true,
+        "ja3": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-156-157,0-23-65281-10-11-16-5-34-51-43-13-28-21,29-23-24-25-256-257,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 4,
+            "value": 131072
+          },
+          {
+            "id": 5,
+            "value": 16384
+          }
+        ],
+        "window_update": 12517377,
+        "pseudo_header_order": [
+          ":method",
+          ":path",
+          ":authority",
+          ":scheme"
+        ],
+        "header_priority": {
+          "stream_dep": 13,
+          "exclusive": false,
+          "weight": 41
+        },
+        "priority_frames": [
+          {
+            "stream_id": 3,
+            "priority": {
+              "stream_dep": 0,
+              "exclusive": false,
+              "weight": 200
+            }
+          },
+          {
+            "stream_id": 5,
+            "priority": {
+              "stream_dep": 0,
+              "exclusive": false,
+              "weight": 100
+            }
+          },
+          {
+            "stream_id": 7,
+            "priority": {
+              "stream_dep": 0,
+              "exclusive": false,
+              "weight": 0
+            }
+          },
+          {
+            "stream_id": 9,
+            "priority": {
+              "stream_dep": 7,
+              "exclusive": false,
+              "weight": 0
+            }
+          },
+          {
+            "stream_id": 11,
+            "priority": {
+              "stream_dep": 3,
+              "exclusive": false,
+              "weight": 0
+            }
+          },
+          {
+            "stream_id": 13,
+            "priority": {
+              "stream_dep": 0,
+              "exclusive": false,
+              "weight": 240
+            }
+          }
+        ]
+      },
+      "headers": {
+        "order": [
+          "user-agent",
+          "accept",
+          "accept-language",
+          "accept-encoding",
+          "upgrade-insecure-requests",
+          "sec-fetch-dest",
+          "sec-fetch-mode",
+          "sec-fetch-site",
+          "sec-fetch-user",
+          "te"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_FIREFOX_126",
+      "id": "c53ec2ba-ddfb-4e62-b53d-201db0c95edf",
+      "product": "firefox",
+      "platform": "windows",
+      "version": "126",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4867,
+          4866,
+          49195,
+          49199,
+          52393,
+          52392,
+          49196,
+          49200,
+          49162,
+          49161,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          0,
+          23,
+          65281,
+          10,
+          11,
+          16,
+          5,
+          34,
+          18,
+          51,
+          43,
+          13,
+          45,
+          28,
+          27,
+          65037,
+          41
+        ],
+        "supported_groups": [
+          4588,
+          29,
+          23,
+          24,
+          25,
+          256,
+          257
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          1283,
+          1539,
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          1537,
+          515,
+          513
+        ],
+        "cert_compression": [
+          1,
+          2,
+          3
+        ],
+        "delegated_credentials": [
+          1027,
+          1283,
+          1539,
+          515
+        ],
+        "record_size_limit": 4001,
+        "random_grease": true,
+        "disable_grease": true,
+        "ja3": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49162-49161-49171-49172-156-157-47-53,0-23-65281-10-11-16-5-34-18-51-43-13-45-28-27-65037-41,4588-29-23-24-25-256-257,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 131072
+          },
+          {
+            "id": 5,
+            "value": 16384
+          }
+        ],
+        "window_update": 12517377,
+        "pseudo_header_order": [
+          ":method",
+          ":path",
+          ":authority",
+          ":scheme"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": false,
+          "weight": 41
+        }
+      },
+      "headers": {
+        "order": [
+          "user-agent",
+          "accept",
+          "accept-language",
+          "accept-encoding",
+          "upgrade-insecure-requests",
+          "sec-fetch-dest",
+          "sec-fetch-mode",
+          "sec-fetch-site",
+          "sec-fetch-user",
+          "priority",
+          "te"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_FIREFOX_135",
+      "id": "4b2020df-0a3c-4c9c-b73e-2ba48246593e",
+      "product": "firefox",
+      "platform": "windows",
+      "version": "135",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4867,
+          4866,
+          49195,
+          49199,
+          52393,
+          52392,
+          49196,
+          49200,
+          49162,
+          49161,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          51,
+          10,
+          23,
+          34,
+          65281,
+          13,
+          18,
+          35,
+          11,
+          27,
+          43,
+          5,
+          0,
+          45,
+          16,
+          65037,
+          28
+        ],
+        "supported_groups": [
+          4588,
+          29,
+          23,
+          24,
+          25,
+          256,
+          257
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          1283,
+          1539,
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          1537,
+          515,
+          513
+        ],
+        "cert_compression": [
+          1,
+          2,
+          3
+        ],
+        "delegated_credentials": [
+          1027,
+          1283,
+          1539,
+          515
+        ],
+        "record_size_limit": 4001,
+        "random_grease": true,
+        "disable_grease": true,
+        "ja3": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49162-49161-49171-49172-156-157-47-53,51-10-23-34-65281-13-18-35-11-27-43-5-0-45-16-65037-28,4588-29-23-24-25-256-257,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 131072
+          },
+          {
+            "id": 5,
+            "value": 16384
+          }
+        ],
+        "window_update": 12517377,
+        "pseudo_header_order": [
+          ":method",
+          ":path",
+          ":authority",
+          ":scheme"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": false,
+          "weight": 41
+        }
+      },
+      "headers": {
+        "order": [
+          "user-agent",
+          "accept",
+          "accept-language",
+          "accept-encoding",
+          "upgrade-insecure-requests",
+          "sec-fetch-dest",
+          "sec-fetch-mode",
+          "sec-fetch-site",
+          "sec-fetch-user",
+          "priority",
+          "te"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_FIREFOX_143",
+      "id": "b53c9f85-44d5-4044-9e94-a522157b7af1",
+      "product": "firefox",
+      "platform": "windows",
+      "version": "143",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4867,
+          4866,
+          49195,
+          49199,
+          52393,
+          52392,
+          49196,
+          49200,
+          49162,
+          49161,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          0,
+          23,
+          65281,
+          10,
+          11,
+          16,
+          5,
+          34,
+          18,
+          51,
+          43,
+          13,
+          28,
+          27,
+          65037
+        ],
+        "supported_groups": [
+          4588,
+          29,
+          23,
+          24,
+          25,
+          256,
+          257
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          1283,
+          1539,
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          1537,
+          515,
+          513
+        ],
+        "cert_compression": [
+          1,
+          2,
+          3
+        ],
+        "delegated_credentials": [
+          1027,
+          1283,
+          1539,
+          515
+        ],
+        "record_size_limit": 4001,
+        "disable_grease": true,
+        "ja3": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49162-49161-49171-49172-156-157-47-53,0-23-65281-10-11-16-5-34-18-51-43-13-28-27-65037,4588-29-23-24-25-256-257,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 131072
+          },
+          {
+            "id": 5,
+            "value": 16384
+          }
+        ],
+        "window_update": 12517377,
+        "pseudo_header_order": [
+          ":method",
+          ":path",
+          ":authority",
+          ":scheme"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": false,
+          "weight": 41
+        }
+      },
+      "headers": {
+        "order": [
+          "user-agent",
+          "accept",
+          "accept-language",
+          "accept-encoding",
+          "sec-gpc",
+          "upgrade-insecure-requests",
+          "sec-fetch-dest",
+          "sec-fetch-mode",
+          "sec-fetch-site",
+          "sec-fetch-user",
+          "priority",
+          "te"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:143.0) Gecko/20100101 Firefox/143.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_FIREFOX_145",
+      "id": "63b08610-8ff8-44ac-8405-b37828e9d834",
+      "product": "firefox",
+      "platform": "windows",
+      "version": "145",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4867,
+          4866,
+          49195,
+          49199,
+          52393,
+          52392,
+          49196,
+          49200,
+          49162,
+          49161,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          0,
+          23,
+          65281,
+          10,
+          11,
+          35,
+          16,
+          5,
+          34,
+          18,
+          51,
+          43,
+          13,
+          45,
+          28,
+          27,
+          65037
+        ],
+        "supported_groups": [
+          4588,
+          29,
+          23,
+          24,
+          25,
+          256,
+          257
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          1283,
+          1539,
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          1537,
+          515,
+          513
+        ],
+        "cert_compression": [
+          1,
+          2,
+          3
+        ],
+        "delegated_credentials": [
+          1027,
+          1283,
+          1539,
+          515
+        ],
+        "record_size_limit": 4001,
+        "disable_grease": true,
+        "ja3": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49162-49161-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25-256-257,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 131072
+          },
+          {
+            "id": 5,
+            "value": 16384
+          }
+        ],
+        "settings_ack": true,
+        "window_update": 12517377,
+        "headers_stream_id": 3,
+        "pseudo_header_order": [
+          ":method",
+          ":path",
+          ":authority",
+          ":scheme"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": false,
+          "weight": 41
+        }
+      },
+      "headers": {
+        "order": [
+          "user-agent",
+          "accept",
+          "accept-language",
+          "accept-encoding",
+          "upgrade-insecure-requests",
+          "sec-fetch-dest",
+          "sec-fetch-mode",
+          "sec-fetch-site",
+          "sec-fetch-user",
+          "priority",
+          "te"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/145.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_FIREFOX_151_WINDOWS",
+      "product": "firefox",
+      "platform": "windows",
+      "version": "151",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4867,
+          4866,
+          49195,
+          49199,
+          52393,
+          52392,
+          49196,
+          49200,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          0,
+          23,
+          65281,
+          10,
+          11,
+          35,
+          16,
+          5,
+          34,
+          18,
+          51,
+          43,
+          13,
+          45,
+          28,
+          27,
+          65037
+        ],
+        "supported_groups": [
+          4588,
+          29,
+          23,
+          24,
+          25,
+          256,
+          257
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          1283,
+          1539,
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          1537,
+          513
+        ],
+        "cert_compression": [
+          1,
+          2,
+          3
+        ],
+        "delegated_credentials": [
+          1027,
+          1283,
+          1539
+        ],
+        "record_size_limit": 16385,
+        "disable_grease": true,
+        "ja3": "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-34-18-51-43-13-45-28-27-65037,4588-29-23-24-25-256-257,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 131072
+          },
+          {
+            "id": 5,
+            "value": 16384
+          }
+        ],
+        "window_update": 12517377,
+        "headers_stream_id": 3,
+        "pseudo_header_order": [
+          ":method",
+          ":path",
+          ":authority",
+          ":scheme"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": false,
+          "weight": 41
+        }
+      },
+      "headers": {
+        "order": [
+          "user-agent",
+          "accept",
+          "accept-language",
+          "accept-encoding",
+          "upgrade-insecure-requests",
+          "sec-fetch-dest",
+          "sec-fetch-mode",
+          "sec-fetch-site",
+          "sec-fetch-user",
+          "priority",
+          "te"
+        ],
+        "values": {
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "en-US,en;q=0.9",
+          "Priority": "u=0, i",
+          "Sec-Fetch-Dest": "document",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-Site": "none",
+          "Sec-Fetch-User": "?1",
+          "Te": "trailers",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 Firefox/151.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_IE_11",
+      "id": "5a1b172e-0081-4b3a-b92f-901460da133e",
+      "product": "ie",
+      "platform": "windows",
+      "version": "11",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          49196,
+          49195,
+          49200,
+          49199,
+          49188,
+          49187,
+          49192,
+          49191,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          61,
+          60,
+          53,
+          47,
+          10
+        ],
+        "extensions": [
+          0,
+          5,
+          10,
+          11,
+          13,
+          35,
+          16,
+          23,
+          24,
+          65281
+        ],
+        "supported_groups": [
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "signature_algorithms": [
+          1025,
+          1281,
+          513,
+          1027,
+          1283,
+          515,
+          514,
+          1537,
+          1539
+        ],
+        "disable_grease": true,
+        "ja3": "771,49196-49195-49200-49199-49188-49187-49192-49191-49162-49161-49172-49171-157-156-61-60-53-47-10,0-5-10-11-13-35-16-23-24-65281,29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 3,
+            "value": 1024
+          },
+          {
+            "id": 4,
+            "value": 10485760
+          }
+        ],
+        "window_update": 10420225,
+        "pseudo_header_order": [
+          ":method",
+          ":path",
+          ":authority",
+          ":scheme"
+        ]
+      },
+      "headers": {
+        "order": [
+          "accept",
+          "accept-language",
+          "user-agent",
+          "accept-encoding"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"
+        }
+      }
+    },
+    {
+      "key": "TLS_OKHTTP_3_12_12",
+      "id": "957c1ee2-71d6-4499-b4a8-1d292da17936",
+      "product": "okhttp",
+      "platform": "android",
+      "version": "3.12.12",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          49195,
+          49196,
+          52393,
+          49199,
+          49200,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          65281,
+          0,
+          23,
+          35,
+          13,
+          16,
+          11,
+          10
+        ],
+        "supported_groups": [
+          23,
+          24,
+          25
+        ],
+        "ec_point_formats": "AA==",
+        "signature_algorithms": [
+          1537,
+          1539,
+          1281,
+          1283,
+          1025,
+          1027,
+          769,
+          771,
+          513,
+          515
+        ],
+        "disable_grease": true,
+        "ja3": "771,49195-49196-52393-49199-49200-52392-49171-49172-156-157-47-53,65281-0-23-35-13-16-11-10,23-24-25,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 4,
+            "value": 16777216
+          }
+        ],
+        "window_update": 16711681,
+        "pseudo_header_order": [
+          ":method",
+          ":path",
+          ":authority",
+          ":scheme"
+        ]
+      },
+      "headers": {
+        "order": [
+          "accept-encoding",
+          "user-agent"
+        ],
+        "values": {
+          "User-Agent": "okhttp/3.12.12"
+        }
+      }
+    },
+    {
+      "key": "TLS_OPR_109",
+      "id": "5b5d0b31-9b46-44b6-8688-24013b0609d0",
+      "product": "opera",
+      "platform": "windows",
+      "version": "109",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          65037,
+          23,
+          0,
+          51,
+          65281,
+          16,
+          45,
+          35,
+          17513,
+          5,
+          18,
+          11,
+          43,
+          27,
+          10,
+          13,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "random_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65037-23-0-51-65281-16-45-35-17513-5-18-11-43-27-10-13-41,29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_OPR_110",
+      "id": "fb90405e-80a6-422f-b1c4-36f12f4dfe1f",
+      "product": "opera",
+      "platform": "windows",
+      "version": "110",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          65037,
+          18,
+          27,
+          65281,
+          43,
+          11,
+          0,
+          13,
+          51,
+          10,
+          45,
+          17513,
+          5,
+          35,
+          23,
+          16,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          25497,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "random_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65037-18-27-65281-43-11-0-13-51-10-45-17513-5-35-23-16-41,25497-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 OPR/110.0.0.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_OPR_116",
+      "id": "9b007218-185c-4565-9419-acb137bbdb66",
+      "product": "opera",
+      "platform": "windows",
+      "version": "116",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49195,
+          49199,
+          49196,
+          49200,
+          52393,
+          52392,
+          49171,
+          49172,
+          156,
+          157,
+          47,
+          53
+        ],
+        "extensions": [
+          0,
+          45,
+          43,
+          5,
+          65281,
+          65037,
+          51,
+          17513,
+          27,
+          16,
+          10,
+          18,
+          23,
+          35,
+          11,
+          13,
+          41
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          1281,
+          2054,
+          1537
+        ],
+        "cert_compression": [
+          2
+        ],
+        "random_grease": true,
+        "ja3": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-45-43-5-65281-65037-51-17513-27-16-10-18-23-35-11-13-41,4588-29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 15663105,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language",
+          "priority"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 OPR/116.0.0.0"
+        }
+      }
+    },
+    {
+      "key": "TLS_POWERSHELL_7_5_3",
+      "id": "79485dea-bc91-4aa2-81e7-17de5e08ccf9",
+      "product": "powershell",
+      "platform": "windows",
+      "version": "7.5.3",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4866,
+          4865,
+          49196,
+          49195,
+          49200,
+          49199,
+          49188,
+          49187,
+          49192,
+          49191,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          61,
+          60,
+          53,
+          47
+        ],
+        "extensions": [
+          0,
+          43,
+          13,
+          35,
+          10,
+          11,
+          16,
+          51,
+          49,
+          23,
+          65281,
+          45,
+          41
+        ],
+        "supported_groups": [
+          29,
+          23,
+          24
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          772,
+          771,
+          770,
+          769
+        ],
+        "signature_algorithms": [
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          513,
+          1027,
+          1283,
+          515,
+          514,
+          1537,
+          1539
+        ],
+        "disable_grease": true,
+        "ja3": "771,4866-4865-49196-49195-49200-49199-49188-49187-49192-49191-49162-49161-49172-49171-157-156-61-60-53-47,0-43-13-35-10-11-16-51-49-23-65281-45-41,29-23-24,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 65535
+          }
+        ],
+        "window_update": 67043329,
+        "pseudo_header_order": [
+          ":method",
+          ":scheme",
+          ":authority",
+          ":path"
+        ]
+      },
+      "headers": {
+        "order": [
+          "user-agent",
+          "accept-encoding"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.26100; zh-CN) PowerShell/7.5.3"
+        }
+      }
+    },
+    {
+      "key": "TLS_REQABLE_2_33_7_CHROME_122",
+      "id": "7c79b33a-93d7-4f81-b6a5-ef64472aa68e",
+      "product": "reqable",
+      "platform": "windows",
+      "version": "2.33.7",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4866,
+          4867,
+          4865,
+          49196,
+          49200,
+          159,
+          52393,
+          52392,
+          52394,
+          49195,
+          49199,
+          158,
+          49188,
+          49192,
+          107,
+          49187,
+          49191,
+          103,
+          49162,
+          49172,
+          57,
+          49161,
+          49171,
+          51,
+          157,
+          156,
+          61,
+          60,
+          53,
+          47,
+          255
+        ],
+        "extensions": [
+          0,
+          11,
+          10,
+          35,
+          16,
+          22,
+          23,
+          13,
+          43,
+          45,
+          51
+        ],
+        "supported_groups": [
+          29,
+          23,
+          30,
+          25,
+          24
+        ],
+        "ec_point_formats": "AAEC",
+        "supported_versions": [
+          772,
+          771,
+          770,
+          769
+        ],
+        "signature_algorithms": [
+          1027,
+          1283,
+          1539,
+          2055,
+          2055,
+          2057,
+          2058,
+          2059,
+          2052,
+          2053,
+          2054,
+          1025,
+          1281,
+          1537,
+          771,
+          515,
+          769,
+          513,
+          770,
+          514,
+          1026,
+          1282,
+          1538
+        ],
+        "disable_grease": true,
+        "ja3": "771,4866-4867-4865-49196-49200-159-52393-52392-52394-49195-49199-158-49188-49192-107-49187-49191-103-49162-49172-57-49161-49171-51-157-156-61-60-53-47-255,0-11-10-35-16-22-23-13-43-45-51,29-23-30-25-24,0-1-2"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 1,
+            "value": 65536
+          },
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 6291456
+          },
+          {
+            "id": 6,
+            "value": 262144
+          }
+        ],
+        "window_update": 1073741823,
+        "pseudo_header_order": [
+          ":method",
+          ":authority",
+          ":scheme",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": true,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-ch-ua",
+          "sec-ch-ua-mobile",
+          "sec-ch-ua-platform",
+          "upgrade-insecure-requests",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "sec-fetch-user",
+          "sec-fetch-dest",
+          "accept-encoding",
+          "accept-language"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.95 Safari/537.36"
+        }
+      }
+    },
+    {
+      "key": "TLS_SAFARI_16_5_1_MACOS_10_15_7",
+      "id": "29dc267f-16eb-4537-a6aa-62e43715a210",
+      "product": "safari",
+      "platform": "macos",
+      "version": "16.5.1",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49196,
+          49195,
+          52393,
+          49200,
+          49199,
+          52392,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          53,
+          47,
+          49160,
+          49170,
+          10
+        ],
+        "extensions": [
+          0,
+          23,
+          65281,
+          10,
+          11,
+          16,
+          5,
+          13,
+          18,
+          51,
+          45,
+          43,
+          27,
+          21
+        ],
+        "supported_groups": [
+          2570,
+          29,
+          23,
+          24,
+          25
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771,
+          770,
+          769
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          515,
+          2053,
+          2053,
+          1281,
+          2054,
+          1537,
+          513
+        ],
+        "cert_compression": [
+          1
+        ],
+        "ja3": "771,4865-4866-4867-49196-49195-52393-49200-49199-52392-49162-49161-49172-49171-157-156-53-47-49160-49170-10,0-23-65281-10-11-16-5-13-18-51-45-43-27-21,29-23-24-25,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 4,
+            "value": 4194304
+          },
+          {
+            "id": 3,
+            "value": 100
+          }
+        ],
+        "window_update": 10485760,
+        "pseudo_header_order": [
+          ":method",
+          ":scheme",
+          ":path",
+          ":authority"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": false,
+          "weight": 254
+        }
+      },
+      "headers": {
+        "order": [
+          "accept",
+          "sec-fetch-site",
+          "accept-encoding",
+          "sec-fetch-mode",
+          "user-agent",
+          "accept-language",
+          "sec-fetch-dest"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5.1 Safari/605.1.15"
+        }
+      }
+    },
+    {
+      "key": "TLS_SAFARI_18_1_MACOS_10_15_7",
+      "id": "1bbb9fb9-82bf-4f29-ab0d-89d0a99c401f",
+      "product": "safari",
+      "platform": "macos",
+      "version": "18.1",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49196,
+          49195,
+          52393,
+          49200,
+          49199,
+          52392,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          53,
+          47,
+          49160,
+          49170,
+          10
+        ],
+        "extensions": [
+          0,
+          23,
+          65281,
+          10,
+          11,
+          16,
+          5,
+          13,
+          18,
+          51,
+          45,
+          43,
+          27,
+          21
+        ],
+        "supported_groups": [
+          2570,
+          29,
+          23,
+          24,
+          25
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771,
+          770,
+          769
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          515,
+          2053,
+          2053,
+          1281,
+          2054,
+          1537,
+          513
+        ],
+        "cert_compression": [
+          1
+        ],
+        "ja3": "771,4865-4866-4867-49196-49195-52393-49200-49199-52392-49162-49161-49172-49171-157-156-53-47-49160-49170-10,0-23-65281-10-11-16-5-13-18-51-45-43-27-21,29-23-24-25,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 3,
+            "value": 100
+          },
+          {
+            "id": 4,
+            "value": 2097152
+          },
+          {
+            "id": 8,
+            "value": 1
+          },
+          {
+            "id": 9,
+            "value": 1
+          }
+        ],
+        "window_update": 10420225,
+        "pseudo_header_order": [
+          ":method",
+          ":scheme",
+          ":authority",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": false,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-fetch-dest",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "accept-language",
+          "priority",
+          "accept-encoding"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15"
+        }
+      }
+    },
+    {
+      "key": "TLS_SAFARI_18_4_MACOS_10_15_7",
+      "id": "484c30e1-f1f8-4950-9b49-2dfc5dc28e1b",
+      "product": "safari",
+      "platform": "macos",
+      "version": "18.4",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49196,
+          49195,
+          52393,
+          49200,
+          49199,
+          52392,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          53,
+          47,
+          49160,
+          49170,
+          10
+        ],
+        "extensions": [
+          0,
+          23,
+          65281,
+          10,
+          11,
+          16,
+          5,
+          13,
+          18,
+          51,
+          45,
+          43,
+          27,
+          21
+        ],
+        "supported_groups": [
+          2570,
+          29,
+          23,
+          24,
+          25
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771,
+          770,
+          769
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          2053,
+          1281,
+          2054,
+          1537,
+          513
+        ],
+        "cert_compression": [
+          1
+        ],
+        "ja3": "771,4865-4866-4867-49196-49195-52393-49200-49199-52392-49162-49161-49172-49171-157-156-53-47-49160-49170-10,0-23-65281-10-11-16-5-13-18-51-45-43-27-21,29-23-24-25,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 3,
+            "value": 100
+          },
+          {
+            "id": 4,
+            "value": 2097152
+          },
+          {
+            "id": 9,
+            "value": 1
+          }
+        ],
+        "window_update": 10420225,
+        "pseudo_header_order": [
+          ":method",
+          ":scheme",
+          ":authority",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": false,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-fetch-dest",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "accept-language",
+          "priority",
+          "accept-encoding"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.4 Safari/605.1.15"
+        }
+      }
+    },
+    {
+      "key": "TLS_SAFARI_18_6_IPHONE_IOS_18_6",
+      "id": "97f46e8d-c74b-454f-a261-f06bf8941e96",
+      "product": "safari",
+      "platform": "ios",
+      "version": "18.6",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49196,
+          49195,
+          52393,
+          49200,
+          49199,
+          52392,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          53,
+          47,
+          49160,
+          49170,
+          10
+        ],
+        "extensions": [
+          0,
+          23,
+          65281,
+          10,
+          11,
+          16,
+          5,
+          13,
+          18,
+          51,
+          45,
+          43,
+          27,
+          21
+        ],
+        "supported_groups": [
+          2570,
+          29,
+          23,
+          24,
+          25
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771,
+          770,
+          769
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          2053,
+          1281,
+          2054,
+          1537,
+          513
+        ],
+        "cert_compression": [
+          1
+        ],
+        "ja3": "771,4865-4866-4867-49196-49195-52393-49200-49199-52392-49162-49161-49172-49171-157-156-53-47-49160-49170-10,0-23-65281-10-11-16-5-13-18-51-45-43-27-21,29-23-24-25,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 3,
+            "value": 100
+          },
+          {
+            "id": 4,
+            "value": 2097152
+          },
+          {
+            "id": 9,
+            "value": 1
+          }
+        ],
+        "window_update": 10420225,
+        "pseudo_header_order": [
+          ":method",
+          ":scheme",
+          ":authority",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": false,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-fetch-dest",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "accept-language",
+          "priority",
+          "accept-encoding"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1"
+        }
+      }
+    },
+    {
+      "key": "TLS_SAFARI_26_0_1_MACOS_18_3",
+      "id": "53b26fd1-7404-4b22-ab54-c04980536069",
+      "product": "safari",
+      "platform": "macos",
+      "version": "26.0.1",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49196,
+          49195,
+          52393,
+          49200,
+          49199,
+          52392,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          53,
+          47,
+          49160,
+          49170,
+          10
+        ],
+        "extensions": [
+          13,
+          27,
+          45,
+          10,
+          51,
+          43,
+          5,
+          11,
+          16,
+          21,
+          23,
+          65281,
+          18,
+          0
+        ],
+        "supported_groups": [
+          2570,
+          29,
+          23,
+          24,
+          25
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771,
+          770,
+          769
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          2053,
+          1281,
+          2054,
+          1537,
+          513
+        ],
+        "cert_compression": [
+          1
+        ],
+        "ja3": "771,4865-4866-4867-49196-49195-52393-49200-49199-52392-49162-49161-49172-49171-157-156-53-47-49160-49170-10,13-27-45-10-51-43-5-11-16-21-23-65281-18-0,29-23-24-25,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 3,
+            "value": 100
+          },
+          {
+            "id": 4,
+            "value": 2097152
+          },
+          {
+            "id": 8,
+            "value": 1
+          },
+          {
+            "id": 9,
+            "value": 1
+          }
+        ],
+        "window_update": 10420225,
+        "pseudo_header_order": [
+          ":method",
+          ":scheme",
+          ":authority",
+          ":path"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": false,
+          "weight": 255
+        }
+      },
+      "headers": {
+        "order": [
+          "sec-fetch-dest",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "accept-language",
+          "priority",
+          "accept-encoding"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 18_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0.1 Mobile/15E148 Safari/604.1"
+        }
+      }
+    },
+    {
+      "key": "TLS_SAFARI_26_0_MACOS_10_15_7",
+      "id": "fe18abd6-f110-4e9b-af75-5dc9b7d44550",
+      "product": "safari",
+      "platform": "macos",
+      "version": "26.0",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4866,
+          4867,
+          4865,
+          49196,
+          49195,
+          52393,
+          49200,
+          49199,
+          52392,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          53,
+          47,
+          49160,
+          49170,
+          10
+        ],
+        "extensions": [
+          0,
+          23,
+          65281,
+          10,
+          11,
+          16,
+          5,
+          13,
+          18,
+          51,
+          45,
+          43,
+          27
+        ],
+        "supported_groups": [
+          2570,
+          4588,
+          29,
+          23,
+          24,
+          25
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          2053,
+          1281,
+          2054,
+          1537,
+          513
+        ],
+        "cert_compression": [
+          1
+        ],
+        "ja3": "771,4866-4867-4865-49196-49195-52393-49200-49199-52392-49162-49161-49172-49171-157-156-53-47-49160-49170-10,0-23-65281-10-11-16-5-13-18-51-45-43-27,4588-29-23-24-25,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 3,
+            "value": 100
+          },
+          {
+            "id": 4,
+            "value": 2097152
+          },
+          {
+            "id": 9,
+            "value": 1
+          }
+        ],
+        "window_update": 10420225,
+        "pseudo_header_order": [
+          ":method",
+          ":scheme",
+          ":authority",
+          ":path"
+        ]
+      },
+      "headers": {
+        "order": [
+          "sec-fetch-dest",
+          "user-agent",
+          "accept",
+          "sec-fetch-site",
+          "sec-fetch-mode",
+          "accept-language",
+          "priority",
+          "accept-encoding"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Safari/605.1.15"
+        }
+      }
+    },
+    {
+      "key": "TLS_WECHAT_8_0_64_IPHONE_IOS_18_6_2",
+      "id": "5ee20c26-8756-49d2-a4ef-b315bc73f837",
+      "product": "wechat",
+      "platform": "ios",
+      "version": "8.0.64",
+      "tls": {
+        "legacy_version": 771,
+        "cipher_suites": [
+          4865,
+          4866,
+          4867,
+          49196,
+          49195,
+          52393,
+          49200,
+          49199,
+          52392,
+          49162,
+          49161,
+          49172,
+          49171,
+          157,
+          156,
+          53,
+          47,
+          49160,
+          49170,
+          10
+        ],
+        "extensions": [
+          0,
+          23,
+          65281,
+          10,
+          11,
+          16,
+          5,
+          13,
+          18,
+          51,
+          45,
+          43,
+          27,
+          21
+        ],
+        "supported_groups": [
+          2570,
+          29,
+          23,
+          24,
+          25
+        ],
+        "ec_point_formats": "AA==",
+        "supported_versions": [
+          2570,
+          772,
+          771,
+          770,
+          769
+        ],
+        "signature_algorithms": [
+          1027,
+          2052,
+          1025,
+          1283,
+          2053,
+          2053,
+          1281,
+          2054,
+          1537,
+          513
+        ],
+        "cert_compression": [
+          1
+        ],
+        "ja3": "771,4865-4866-4867-49196-49195-52393-49200-49199-52392-49162-49161-49172-49171-157-156-53-47-49160-49170-10,0-23-65281-10-11-16-5-13-18-51-45-43-27-21,29-23-24-25,0"
+      },
+      "http2": {
+        "settings": [
+          {
+            "id": 2,
+            "value": 0
+          },
+          {
+            "id": 4,
+            "value": 2097152
+          },
+          {
+            "id": 3,
+            "value": 100
+          }
+        ],
+        "window_update": 10485760,
+        "pseudo_header_order": [
+          ":method",
+          ":scheme",
+          ":path",
+          ":authority"
+        ],
+        "header_priority": {
+          "stream_dep": 0,
+          "exclusive": false,
+          "weight": 254
+        }
+      },
+      "headers": {
+        "order": [
+          "accept",
+          "sec-fetch-site",
+          "accept-encoding",
+          "sec-fetch-mode",
+          "user-agent",
+          "accept-language",
+          "sec-fetch-dest"
+        ],
+        "values": {
+          "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.64(0x18004029) NetType/4G Language/zh_CN"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        go-version: [ "1.24.x", "1.25.x", "1.26.x" ]
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: ${{ matrix.go-version }}
+          cache: true
+
+      - name: gofmt check
+        run: |
+          unformatted="$(gofmt -l .)"
+          if [ -n "$unformatted" ]; then
+            echo "Unformatted files:"; echo "$unformatted"; exit 1
+          fi
+
+      - name: go vet
+        run: go vet ./...
+
+      - name: go test (core)
+        run: go test ./...
+
+      - name: go build (cli)
+        run: go build ./cmd/tlsprint
+
+      - name: go test (utls adapter)
+        if: runner.os != 'windows'
+        working-directory: utls
+        run: go test ./...
+
+      - name: go test (http client)
+        if: runner.os != 'windows'
+        working-directory: client
+        run: go test ./...
+
+      - name: go test (http2 fork)
+        if: runner.os != 'windows'
+        working-directory: http2
+        run: go test ./...

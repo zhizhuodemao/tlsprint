@@ -1,0 +1,156 @@
+package iana
+
+import (
+	"fmt"
+	"sort"
+	"strings"
+)
+
+// Cipher suite ids (IANA "TLS Cipher Suites" registry). Only the suites that
+// appear in mainstream browser and tooling fingerprints are listed; unknown
+// ids are handled numerically everywhere in tlsprint.
+const (
+	// TLS 1.3 (RFC 8446).
+	TLS_AES_128_GCM_SHA256       = 0x1301
+	TLS_AES_256_GCM_SHA384       = 0x1302
+	TLS_CHACHA20_POLY1305_SHA256 = 0x1303
+	TLS_AES_128_CCM_SHA256       = 0x1304
+	TLS_AES_128_CCM_8_SHA256     = 0x1305
+
+	// ECDHE suites.
+	TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 = 0xc02b
+	TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 = 0xc02c
+	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   = 0xc02f
+	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384   = 0xc030
+
+	TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 = 0xcca9
+	TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256   = 0xcca8
+	TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256   = 0xccac
+	TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256     = 0xccaa
+	TLS_DHE_PSK_WITH_CHACHA20_POLY1305_SHA256     = 0xccab
+
+	TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA    = 0xc009
+	TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA    = 0xc00a
+	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA      = 0xc013
+	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA      = 0xc014
+	TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 = 0xc023
+	TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 = 0xc024
+	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256   = 0xc027
+	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384   = 0xc028
+
+	// RSA (non-ECDHE) suites.
+	TLS_RSA_WITH_AES_128_CBC_SHA    = 0x002f
+	TLS_RSA_WITH_AES_256_CBC_SHA    = 0x0035
+	TLS_RSA_WITH_AES_128_CBC_SHA256 = 0x003c
+	TLS_RSA_WITH_AES_256_CBC_SHA256 = 0x003d
+	TLS_RSA_WITH_AES_128_GCM_SHA256 = 0x009c
+	TLS_RSA_WITH_AES_256_GCM_SHA384 = 0x009d
+	TLS_RSA_WITH_3DES_EDE_CBC_SHA   = 0x000a
+
+	// DHE suites.
+	TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 = 0x009e
+	TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 = 0x009f
+	TLS_DHE_RSA_WITH_AES_128_CBC_SHA    = 0x0033
+	TLS_DHE_RSA_WITH_AES_256_CBC_SHA    = 0x0039
+	TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 = 0x0067
+	TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 = 0x006b
+
+	// Legacy / special.
+	TLS_RSA_WITH_RC4_128_SHA          = 0x0005
+	TLS_RSA_WITH_RC4_128_MD5          = 0x0004
+	TLS_EMPTY_RENEGOTIATION_INFO_SCSV = 0x00ff
+	TLS_FALLBACK_SCSV                 = 0x5600
+)
+
+// cipherNames maps cipher suite ids to canonical IANA names. Names use the
+// uTLS/Go spelling (TLS_ prefix, no "WITH_SSLv3" style suffixes beyond IANA).
+var cipherNames = map[uint16]string{
+	TLS_AES_128_GCM_SHA256:                        "TLS_AES_128_GCM_SHA256",
+	TLS_AES_256_GCM_SHA384:                        "TLS_AES_256_GCM_SHA384",
+	TLS_CHACHA20_POLY1305_SHA256:                  "TLS_CHACHA20_POLY1305_SHA256",
+	TLS_AES_128_CCM_SHA256:                        "TLS_AES_128_CCM_SHA256",
+	TLS_AES_128_CCM_8_SHA256:                      "TLS_AES_128_CCM_8_SHA256",
+	TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256:       "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+	TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384:       "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256:         "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384:         "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+	TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256: "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+	TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256:   "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+	TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256:   "TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256",
+	TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256:     "TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+	TLS_DHE_PSK_WITH_CHACHA20_POLY1305_SHA256:     "TLS_DHE_PSK_WITH_CHACHA20_POLY1305_SHA256",
+	TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA:          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
+	TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA:          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA:            "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
+	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA:            "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+	TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256:       "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+	TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384:       "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384",
+	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256:         "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256",
+	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384:         "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384",
+	TLS_RSA_WITH_AES_128_CBC_SHA:                  "TLS_RSA_WITH_AES_128_CBC_SHA",
+	TLS_RSA_WITH_AES_256_CBC_SHA:                  "TLS_RSA_WITH_AES_256_CBC_SHA",
+	TLS_RSA_WITH_AES_128_CBC_SHA256:               "TLS_RSA_WITH_AES_128_CBC_SHA256",
+	TLS_RSA_WITH_AES_256_CBC_SHA256:               "TLS_RSA_WITH_AES_256_CBC_SHA256",
+	TLS_RSA_WITH_AES_128_GCM_SHA256:               "TLS_RSA_WITH_AES_128_GCM_SHA256",
+	TLS_RSA_WITH_AES_256_GCM_SHA384:               "TLS_RSA_WITH_AES_256_GCM_SHA384",
+	TLS_RSA_WITH_3DES_EDE_CBC_SHA:                 "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+	TLS_DHE_RSA_WITH_AES_128_GCM_SHA256:           "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256",
+	TLS_DHE_RSA_WITH_AES_256_GCM_SHA384:           "TLS_DHE_RSA_WITH_AES_256_GCM_SHA384",
+	TLS_DHE_RSA_WITH_AES_128_CBC_SHA:              "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+	TLS_DHE_RSA_WITH_AES_256_CBC_SHA:              "TLS_DHE_RSA_WITH_AES_256_CBC_SHA",
+	TLS_DHE_RSA_WITH_AES_128_CBC_SHA256:           "TLS_DHE_RSA_WITH_AES_128_CBC_SHA256",
+	TLS_DHE_RSA_WITH_AES_256_CBC_SHA256:           "TLS_DHE_RSA_WITH_AES_256_CBC_SHA256",
+	TLS_RSA_WITH_RC4_128_SHA:                      "TLS_RSA_WITH_RC4_128_SHA",
+	TLS_RSA_WITH_RC4_128_MD5:                      "TLS_RSA_WITH_RC4_128_MD5",
+	TLS_EMPTY_RENEGOTIATION_INFO_SCSV:             "TLS_EMPTY_RENEGOTIATION_INFO_SCSV",
+	TLS_FALLBACK_SCSV:                             "TLS_FALLBACK_SCSV",
+}
+
+// CipherSuiteName returns the canonical name for a cipher suite id, or ""
+// when unknown. GREASE ids return "" (see IsGrease).
+func CipherSuiteName(id uint16) string {
+	if IsGrease(id) {
+		return ""
+	}
+	return cipherNames[id]
+}
+
+// CipherSuiteDisplay renders a cipher suite id as its name when known,
+// otherwise as hex.
+func CipherSuiteDisplay(id uint16) string {
+	if IsGrease(id) {
+		return fmt.Sprintf("GREASE(0x%04x)", id)
+	}
+	if n := cipherNames[id]; n != "" {
+		return n
+	}
+	return fmt.Sprintf("0x%04x", id)
+}
+
+// ParseCipherSuite parses a cipher suite name ("TLS_AES_128_GCM_SHA256"),
+// decimal id, or hex id ("0x1301") into its numeric value.
+func ParseCipherSuite(s string) (id uint16, ok bool) {
+	t := strings.ToUpper(strings.TrimSpace(s))
+	if t == "" {
+		return 0, false
+	}
+	if v, valid := parseNumericID(t); valid {
+		return v, true
+	}
+	for id, name := range cipherNames {
+		if name == t {
+			return id, true
+		}
+	}
+	return 0, false
+}
+
+// CipherSuiteNames returns a sorted list of all known cipher suite names.
+func CipherSuiteNames() []string {
+	out := make([]string, 0, len(cipherNames))
+	for _, n := range cipherNames {
+		out = append(out, n)
+	}
+	sort.Strings(out)
+	return out
+}

@@ -1,0 +1,75 @@
+# Curated preset allowlist for the tlsprint built-in fingerprint registry.
+#
+# Each line selects one TLS_* preset from the reference "proteus" collection
+# dump and optionally overrides its derived metadata:
+#
+#   TLS_VAR_NAME [product [platform [version]]]
+#
+# Lines starting with # are comments. Run:
+#
+#   go run ./tools/importproteus \
+#     -in /path/to/proteus_dump.json \
+#     -allow preset/data/ALLOWLIST.txt \
+#     -out preset/data/registry.json
+#
+# (see preset/data/README.md for dump provenance).
+
+# --- Google Chrome ---
+TLS_CHROME_131 chrome windows
+TLS_CHROME_133 chrome windows
+TLS_CHROME_135 chrome windows
+TLS_CHROME_138 chrome windows
+TLS_CHROME_140 chrome windows
+TLS_CHROME_141 chrome windows
+TLS_CHROME_130_MACOS_10_15_7 chrome macos
+TLS_CHROME_141_MACOS_10_15_7 chrome macos
+TLS_CHROME_142_MACOS_10_15_7 chrome macos
+TLS_CHROME_143_MACOS_15_05 chrome macos
+TLS_CHROME_144_MACOS_10_15_7 chrome macos
+TLS_CHROME_149_0_7827_197_MACOS_10_15_7 chrome macos
+TLS_CHROME_135_K_ANDROID_10 chrome android
+TLS_CHROME_140_K_ANDROID_10 chrome android
+
+# --- Mozilla Firefox ---
+TLS_FIREFOX_115 firefox windows
+TLS_FIREFOX_126 firefox windows
+TLS_FIREFOX_135 firefox windows
+TLS_FIREFOX_143 firefox windows
+TLS_FIREFOX_145 firefox windows
+TLS_FIREFOX_151_WINDOWS firefox windows
+
+# --- Apple Safari ---
+TLS_SAFARI_16_5_1_MACOS_10_15_7 safari macos
+TLS_SAFARI_18_1_MACOS_10_15_7 safari macos
+TLS_SAFARI_18_4_MACOS_10_15_7 safari macos
+TLS_SAFARI_18_6_IPHONE_IOS_18_6 safari ios
+TLS_SAFARI_26_0_MACOS_10_15_7 safari macos
+TLS_SAFARI_26_0_1_MACOS_18_3 safari macos
+
+# --- Microsoft Edge ---
+TLS_EDGE_131 edge windows
+TLS_EDGE_141 edge windows
+TLS_EDGE_144_MACOS_10_15_7 edge macos
+TLS_EDGE_150_MACOS_10_15_7 edge macos
+
+# --- Opera ---
+TLS_OPR_109 opera windows
+TLS_OPR_110 opera windows
+TLS_OPR_116 opera windows
+
+# --- Command-line and library clients ---
+TLS_CURL_8_4_0 curl
+TLS_CURL_8_7_1 curl
+TLS_CURL_8_9_1 curl
+TLS_CURL_8_13_0 curl
+TLS_CURL_8_15_0 curl
+TLS_CURL_8_16_0 curl
+TLS_OKHTTP_3_12_12 okhttp android
+TLS_POWERSHELL_7_5_3 powershell windows
+TLS_IE_11 ie windows
+
+# --- Tooling and messaging clients (breadth sample) ---
+TLS_CHARLES_5_0_1_CHROME_142 charles windows
+TLS_REQABLE_2_33_7_CHROME_122 reqable windows
+TLS_FIDDLER_5_0_20253_3311_CHROME_122 fiddler windows
+TLS_WECHAT_8_0_64_IPHONE_IOS_18_6_2 wechat ios
