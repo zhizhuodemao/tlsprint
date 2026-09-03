@@ -1,9 +1,21 @@
 # 🌀 tlsprint
 
 **English** | [简体中文](README.md)
+<p align="center">
+  <a href="https://pkg.go.dev/github.com/lingulingo/tlsprint/client"><img alt="Go Reference" src="https://pkg.go.dev/badge/github.com/lingulingo/tlsprint/client.svg"></a>
+  <a href="https://github.com/lingulingo/tlsprint/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/lingulingo/tlsprint/actions/workflows/ci.yml/badge.svg"></a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg">
+  <img alt="Go" src="https://img.shields.io/badge/Go-1.24+-00ADD8.svg">
+</p>
 
 **Engine-independent TLS fingerprint library for Go — with a byte-exact,
 curl_cffi-style impersonating HTTP client, and zero CGO.**
+
+**Keywords:** Go TLS fingerprint · JA3 · JA4 · uTLS · browser impersonation ·
+HTTP/2 fingerprint · anti-bot · Go HTTP client · fingerprint database.
+
+> 📦 **Go Reference** (mirrored to pkg.go.dev):
+> [github.com/lingulingo/tlsprint/client](https://pkg.go.dev/github.com/lingulingo/tlsprint/client)
 
 `tlsprint` describes **what a TLS client really puts on the wire** — ciphers,
 extension order, groups, signature algorithms, HTTP/2 settings, header order —

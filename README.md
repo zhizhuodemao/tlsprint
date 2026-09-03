@@ -1,6 +1,12 @@
 # tlsprint
 
 [English](README.en.md) | **简体中文**
+<p align="center">
+  <a href="https://pkg.go.dev/github.com/lingulingo/tlsprint/client"><img alt="Go Reference" src="https://pkg.go.dev/badge/github.com/lingulingo/tlsprint/client.svg"></a>
+  <a href="https://github.com/lingulingo/tlsprint/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/lingulingo/tlsprint/actions/workflows/ci.yml/badge.svg"></a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg">
+  <img alt="Go" src="https://img.shields.io/badge/Go-1.24+-00ADD8.svg">
+</p>
 
 **引擎无关的 Go TLS 指纹库 —— 附可直接使用的浏览器模拟 HTTP 客户端。**
 
@@ -8,6 +14,13 @@
 往返的结构描述客户端在网络上发送的内容（密码套件、扩展顺序、群组、签名算法、
 HTTP/2 行为、Header 顺序），支持 JA3/JA4 指纹计算、原始 ClientHello 的
 解析/构造，并内置一份精选的真实浏览器指纹注册表。核心模块**零第三方依赖**。
+
+**关键词：** Go TLS 指纹 · JA3 · JA4 · uTLS · 浏览器模拟(impersonation) · HTTP/2 指纹 ·
+反爬虫 / 反机器人 · Go HTTP 客户端 · 指纹数据库。
+
+> 📦 **Go Reference（自动镜像到 pkg.go.dev）:**
+> [github.com/lingulingo/tlsprint/client](https://pkg.go.dev/github.com/lingulingo/tlsprint/client)
+
 
 数据层之上还有两个可选、依赖隔离的模块，让指纹真正可用：
 
