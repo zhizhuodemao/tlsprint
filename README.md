@@ -1,5 +1,7 @@
 # 🌀 tlsprint
 
+**English** | [简体中文](README.zh-CN.md)
+
 **Engine-independent TLS fingerprint library for Go — with a byte-exact,
 curl_cffi-style impersonating HTTP client, and zero CGO.**
 

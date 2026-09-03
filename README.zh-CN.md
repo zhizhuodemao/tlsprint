@@ -1,5 +1,7 @@
 # tlsprint
 
+[English](README.md) | **简体中文**
+
 **引擎无关的 Go TLS 指纹库 —— 附可直接使用的浏览器模拟 HTTP 客户端。**
 
 `tlsprint` 是 TLS 客户端指纹的"标准数据层"：用类型化、可版本化、可 JSON
