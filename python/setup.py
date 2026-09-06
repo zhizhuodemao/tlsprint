@@ -2,6 +2,7 @@
 
 import os
 from pathlib import Path
+import platform
 import shutil
 import subprocess
 import sys
@@ -57,6 +58,12 @@ def stage_native(destination):
 class BuildPy(build_py):
     def run(self):
         super().run()
+        if sys.platform == "linux" and platform.libc_ver()[0] != "glibc":
+            raise RuntimeError(
+                "tlsprint-python currently requires glibc on Linux. Alpine/musl "
+                "is not supported because of Go's c-shared runtime limitations "
+                "(https://github.com/golang/go/issues/13492)."
+            )
         if not shutil.which("go"):
             raise RuntimeError(
                 "Building tlsprint-python from source requires Go >= 1.24 and a C compiler. "

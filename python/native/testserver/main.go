@@ -181,6 +181,10 @@ func capture(raw net.Conn, config *tls.Config) {
 			encoder.WriteField(hpack.HeaderField{Name: "content-type", Value: "application/json"})
 			fr.WriteHeaders(http2.HeadersFrameParam{StreamID: f.StreamID, BlockFragment: block.Bytes(), EndHeaders: true})
 			fr.WriteData(f.StreamID, true, body)
+			// Let the client consume END_STREAM and close its session. Closing
+			// with unread SETTINGS ACK/WINDOW_UPDATE bytes can send a TCP reset
+			// on Windows before the response body has reached the client.
+			io.Copy(io.Discard, conn)
 			return
 		}
 	}

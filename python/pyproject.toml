@@ -26,14 +26,13 @@ tlsprint = ["py.typed"]
 # The shared-library ABI is independent of CPython. Build once per platform;
 # cibuildwheel reuses the py3-none wheel when testing the second interpreter.
 build = "cp310-* cp314-*"
+skip = "*-musllinux_*"
 archs = ["native"]
 test-command = "python {package}/tools/test_wheel.py"
 
 [tool.cibuildwheel.linux]
 manylinux-x86_64-image = "manylinux2014"
 manylinux-aarch64-image = "manylinux2014"
-musllinux-x86_64-image = "musllinux_1_2"
-musllinux-aarch64-image = "musllinux_1_2"
 before-all = "python {package}/tools/install_linux_go.py"
 environment = { PATH = "/opt/tlsprint-toolchain/go/bin:$PATH" }
 

@@ -20,7 +20,6 @@ The 0.1.1 wheel matrix covers these 64-bit platforms:
 | Operating system | Architectures | Minimum runtime |
 | --- | --- | --- |
 | Linux (glibc) | x86_64, ARM64/aarch64 | glibc 2.17 (`manylinux2014`) |
-| Linux (Alpine/musl) | x86_64, ARM64/aarch64 | musl 1.2 (`musllinux_1_2`) |
 | macOS | Intel x86_64, Apple Silicon ARM64 | macOS 11 |
 | Windows | x64/AMD64, ARM64 | Windows 10 x64 / Windows 11 ARM64 |
 
@@ -29,6 +28,11 @@ requests made with Go and the C compiler removed from PATH. Tests cover Python
 3.10 and 3.14 (3.11 and 3.14 for Windows ARM64). 32-bit systems are not in this
 release matrix. Use `pip install --only-binary=:all: tlsprint-python` to require
 a prebuilt wheel and avoid an automatic source build.
+
+Alpine/musl is not supported in this release: Go's `c-shared` runtime can crash
+when loaded there ([upstream issue](https://github.com/golang/go/issues/13492)).
+The source build rejects non-glibc Linux environments. Use a glibc distribution
+such as Ubuntu, Debian or RHEL; Alpine support is deferred to a separate adaptation.
 
 ```python
 import tlsprint
@@ -132,7 +136,7 @@ platform-specific but independent of CPython's extension ABI (`py3-none-<platfor
 Third-party license texts are included in `licenses/`.
 
 The [Python wheel workflow](https://github.com/zhizhuodemao/tlsprint/actions/workflows/python-wheels.yml)
-builds with cibuildwheel. Linux builds run inside manylinux/musllinux containers;
+builds with cibuildwheel. Linux builds run inside manylinux containers;
 Windows uses a checksum-verified LLVM-MinGW toolchain. auditwheel, delocate and
 delvewheel check platform dependencies before installation tests run. The workflow
 uploads tested artifacts to GitHub; it does not hold PyPI credentials.

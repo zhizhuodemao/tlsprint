@@ -1,4 +1,4 @@
-"""Install the pinned Go toolchain inside a manylinux/musllinux build container."""
+"""Install the pinned Go toolchain inside a manylinux build container."""
 
 import hashlib
 from pathlib import Path
