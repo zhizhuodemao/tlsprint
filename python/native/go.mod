@@ -1,0 +1,28 @@
+module github.com/lingulingo/tlsprint/python/native
+
+go 1.24.0
+
+require (
+	github.com/lingulingo/tlsprint v1.0.0
+	github.com/lingulingo/tlsprint/client v1.0.0
+	github.com/lingulingo/tlsprint/http2 v1.0.0
+)
+
+require (
+	github.com/andybalholm/brotli v1.0.6 // indirect
+	github.com/klauspost/compress v1.17.4 // indirect
+	github.com/lingulingo/tlsprint/utls v1.0.0 // indirect
+	github.com/refraction-networking/utls v1.8.2 // indirect
+	golang.org/x/crypto v0.47.0 // indirect
+	golang.org/x/net v0.49.0 // indirect
+	golang.org/x/sys v0.40.0 // indirect
+	golang.org/x/text v0.33.0 // indirect
+)
+
+replace github.com/lingulingo/tlsprint => ../..
+
+replace github.com/lingulingo/tlsprint/client => ../../client
+
+replace github.com/lingulingo/tlsprint/http2 => ../../http2
+
+replace github.com/lingulingo/tlsprint/utls => ../../utls

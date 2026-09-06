@@ -1,0 +1,16 @@
+This module (github.com/tlsprint/tlsprint/http2) is a fork of the
+golang.org/x/net/http2 package (the Go HTTP/2 transport, framing and HPACK
+implementation), modified to expose a byte-exact connection fingerprint
+(see the Fingerprint type on Transport).
+
+Upstream: https://github.com/golang/net
+Copyright: The Go Authors. Licensed under the BSD-3-Clause license, which is
+reproduced in each source file's header. Original header comments and
+copyright notices are retained.
+
+Changes made for tlsprint:
+- Added Transport.Fingerprint to control the SETTINGS preamble order,
+  the initial connection WINDOW_UPDATE, the request pseudo-header and header
+  send order, and the stream priority attached to the request HEADERS frame.
+- Added corresponding header-order plumbing to the vendored
+  internal/httpcommon encoder.

@@ -100,7 +100,7 @@ func (rt *roundTripper) RoundTrip(req *http.Request) (*http.Response, error) {
 		return nil, errors.New("client: no preset selected")
 	}
 
-	// Plain http (no TLS): the h1 transport dials directly.
+	// Plain HTTP uses the h1 transport, including its configured proxy.
 	if req.URL.Scheme == "http" {
 		return rt.h1Transport(snap).RoundTrip(req)
 	}
@@ -164,6 +164,13 @@ func (rt *roundTripper) h1Transport(snap dialSnapshot) http.RoundTripper {
 	defer rt.mu.Unlock()
 	if rt.h1 == nil {
 		t := &http.Transport{
+			Proxy: func(req *http.Request) (*url.URL, error) {
+				if req.URL.Scheme == "http" {
+					return snap.proxy, nil
+				}
+				// HTTPS proxying is handled by dialRaw inside DialTLSContext.
+				return nil, nil
+			},
 			DialTLSContext: func(ctx context.Context, network, addr string) (net.Conn, error) {
 				return rt.dial(ctx, network, addr, snap, []string{"http/1.1"})
 			},
@@ -286,6 +293,19 @@ func (rt *roundTripper) dialRaw(ctx context.Context, network, addr string, proxy
 	if err != nil {
 		return nil, fmt.Errorf("client: dial proxy %s: %w", proxy.Host, err)
 	}
+	// CONNECT reads/writes must be interrupted by request cancellation too.
+	// Stop and join the callback before returning the tunnel to the pool.
+	rawProxy := pc
+	cancelled := make(chan struct{})
+	stopCancel := context.AfterFunc(ctx, func() {
+		rawProxy.Close()
+		close(cancelled)
+	})
+	defer func() {
+		if !stopCancel() {
+			<-cancelled
+		}
+	}()
 	if proxy.Scheme == "https" {
 		tlsConfig := &tls.Config{ServerName: proxyHostname(proxy.Host)}
 		tlsConn := tls.Client(pc, tlsConfig)

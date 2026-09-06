@@ -1,0 +1,7 @@
+include setup.py LICENSE
+recursive-include native *.go go.mod go.sum
+recursive-include licenses *
+recursive-include tests *.py
+recursive-include tools *.py
+recursive-include src *.py py.typed
+global-exclude __pycache__ *.pyc
