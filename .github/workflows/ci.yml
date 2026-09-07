@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main, master, python-platform-wheels ]
   pull_request:
 
 permissions:
@@ -25,6 +25,7 @@ jobs:
           cache: true
 
       - name: gofmt check
+        shell: bash
         run: |
           unformatted="$(gofmt -l .)"
           if [ -n "$unformatted" ]; then
